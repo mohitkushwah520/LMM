@@ -1,0 +1,54 @@
+<div class="hero_banner ourwork_banner">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-4 d-flex justify-content-center align-items-center">
+              <div class="content_box w-100 pl-5">
+                <span class="lmm_h1 d-block">our</span>
+                <span class="lmm_h1 d-block">work</span>
+                <a routerLink="/services" class="lmm_arrow_btn">view services</a>
+                <a href="" class="mt-5 d-block" (click)="videoOpen()"><app-lmm-button ButtonText="showreel"></app-lmm-button></a>
+              </div>
+          </div>
+          <div class="col-md-6 ml-auto">
+            <video src="../../../assets/media/video/ourWork/Work_Header.mp4" muted autoplay loop></video>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="main_video" id="mainVideo">
+  <video #mainVideo src="../../../assets/media/video/short_video.mp4" (click)="videoClose()" id="mainVideo" (mouseover)="M_CursorIn()" (mouseout)="M_CursorOut()"></video>
+  <button id="sound" class="video_btn fa sound" (click)="sound()"></button>
+  <button id="mute" class="video_btn fa mute" (click)="mute()"></button>
+</div>
+
+<!-- <div class="herobanner ourwork_banner">
+  <div class="container-fluid h-100">
+    <div class="row d-flex h-100 align-items-center">
+      <div class="content_box">
+        <span class="lmm_h1 d-block">our</span>
+        <span class="lmm_h1 d-block">work</span>
+        <a href="" class="lmm_arrow_btn my-5"><i>&#8594;</i>view work</a>
+        <a href="" class="lmm_btn mt-5 d-block">showreel</a>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="ourwork_tabs">
+  <mat-tab-group mat-align-tabs="center" selectedIndex='1' [disableRipple]="true" #matTabGroup>
+    <mat-tab [label]="item.workCategory"  *ngFor="let item of workdata">
+      <div class="row mt-5 pt-5">
+        <div class="col-md-6 d-flex-row justify-content-center align-items-center my-5" *ngFor="let itemdetail of item.images">
+          <div class="media" *ngIf="itemdetail.imageType === 'static'">
+            <img [src]="itemdetail.image" alt="">
+          </div>
+          <div class="media" *ngIf="itemdetail.imageType === 'video'">
+            <video [src]="itemdetail.image"loop #video></video>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+<div class="lmm_cursor fa" #cursor>
+  <span></span>
+</div>

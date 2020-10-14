@@ -1,0 +1,33 @@
+<div class="hero_banner blogs_banner">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-4 d-flex align-items-center">
+              <div class="content_box w-100">
+                  <h1 class="lmm_h1">blogs</h1>
+                  <p class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam inventore necessitatibus debitis excepturi at aperiam dicta quo esse fuga non harum architecto ipsam perferendis ipsa eligendi sequi modi nisi nulla eaque, quidem ullam velit quae tenetur. Ipsam illo libero quae nesciunt deleniti facilis earum, et quos delectus odio repellendus sed!</p>
+              </div>
+          </div>
+      </div>
+      <video src="../../../assets/media/video/blogs/Blogs_Landing.mp4" muted autoplay loop #blogsbanner></video>
+  </div>
+</div>
+<div class="blogs">
+  <div class="container-fluid">
+    <div class="row position-relative">
+      <div class="col-md-6 text-center" *ngFor="let item of blogsData">
+        <div class="box text-center" [routerLink]="'/blog/'+item.id">
+          <div class="card text-center"  (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()">
+            <img [src]="item.blogImage" alt="blogImage">
+            <!-- <div class="hover" [routerLink]="'/blog/'+item.id">
+              <p class="text-white">{{item.blogHover}}</p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <app-blog-detail></app-blog-detail> -->
+</div>
+<div class="lmm_cursor fa" #cursor>
+  <span></span>
+</div>

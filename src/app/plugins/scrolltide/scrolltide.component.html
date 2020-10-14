@@ -1,0 +1,6 @@
+<div class="scrolltideText" #scrolltideText>
+  <div *ngIf="type == 'text'">{{content}}</div>
+  <div *ngIf="type == 'image'">
+    <img [src]="content" alt="" [class]='class'>
+  </div>
+</div>

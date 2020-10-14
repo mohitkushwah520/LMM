@@ -1,0 +1,42 @@
+<section class="blogsDetail" *ngFor="let item of blogDetail">
+  <div class="detail" *ngIf="item.id == this.id">
+    <div class="hero_banner blogDetail_banner">
+      <div class="container-fluid">
+        <div class="row">
+          <img src="../../../assets/media/images/blogdetail_banner.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="blogDetail_wrap_1">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-10 m-auto text-center py-5 my-5">
+            <p class="text-justify my-5 py-5">{{item.blogDescription | slice :  0 : 1000}}</p>
+            <!-- <img [src]="item.blogImage" class="my-5 py-5 d-inline" alt=""> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="blogDetail_wrap_2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-11 m-auto px-5">
+            <div class="row">
+              <div class="col-md-3 mb-3 pb-5">
+                <div class="lmm_h1 pl-5"><span class="lmm_h5 d-block mb-n4">other</span><span class="d-block">blogs</span></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 text-center" [routerLink]="'/blog/'+item.id" *ngFor="let item of blogDetail" [class.d-none]="item.id == this.id">
+                <img [src]="item.blogImage" alt="" (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--condition div-->
+</section>
+<div class="lmm_cursor fa" #cursor>
+  <span></span>
+</div>

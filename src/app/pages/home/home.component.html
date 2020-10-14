@@ -1,0 +1,138 @@
+<div class="banner">
+  <div class="video">
+      <video id="hero" autoplay #herovideo muted src="../../../assets/media/video/Hero_Video.mp4">
+      </video>
+  </div>
+  <div class="banner_content w-25 text-right" #title>
+      <span class="lmm_h1 d-block">loud</span>
+      <span class="lmm_h1 d-block">mob</span>
+      <span class="lmm_h1 dot d-block"></span>
+      <span class="lmm_h1 d-block">media</span>
+  </div>
+  <a #btn><app-lmm-button ButtonText="our work" link="ourwork"></app-lmm-button></a>
+</div>
+<div class="show_reel mt-5 pt-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-5">
+        <div class="content_box mt-4">
+          <p class="text-justify mb-5">A design, strategy, technology and marketing (full-service digital agency) agency for the loud, the nimble and the game-changers. From small businesses to shark tank winners, we love working with businesses who are new-age, adaptive and think differently. We use innovative designs, strategies, marketing and technologies to create engaging experiences that attract attention and audiences, drive business and acquire fans. With loud storytelling at the core, we help growing businesses grow faster. Take a look at what we’ve already done/created.</p>
+          <a href="" class="mt-5 d-flex justify-content-end"><app-lmm-button ButtonText="about us" link="aboutUs"></app-lmm-button></a>
+        </div>
+      </div>
+      <div class="col-xl-7">
+        <div class="media">
+          <div class="short_video" id="shortVideo" (click)="videoOpen()" (mouseover)="S_CursorIn()" (mouseout)="S_CursorOut()">
+            <video src="../../../assets/media/video/short_video.mp4" #shortReel autoplay loop></video>
+          </div>
+          <div class="main_video" id="mainVideo">
+            <video #mainVideo src="../../../assets/media/video/short_video.mp4" (click)="videoClose()" id="mainVideo" (mouseover)="M_CursorIn()" (mouseout)="M_CursorOut()"></video>
+            <button id="sound" class="video_btn fa sound" (click)="sound()"></button>
+            <button id="mute" class="video_btn fa mute" (click)="mute()"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scrolltrigger m-0 p-0">
+    <h1 class="m-0 lmm_h1_stroke" id="showreel">
+      <app-scrolltide content="showreel" type="text" time="1"></app-scrolltide>
+    </h1>
+  </div>
+</div>
+<div class="our_recent">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="w-25 text-right">
+        <span class="lmm_h1 d-block">our</span>
+        <span class="lmm_h1 d-block">recent</span>
+      </div>
+    </div>
+    <div class="row pt-5">
+      <div class="col-md-9 m-auto">
+        <div class="our_recent_card" *ngFor="let item of our_recent">
+          <p class="w-50">{{item.description}}</p>
+          <!-- <lottie-player [src]="item.lottieURL" [id]="item.id" speed="10" loop (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()"></lottie-player> -->
+          <app-video [src]='item.src'></app-video>
+          <!-- <img src="../../../assets/media/video/services/cocoalite.mp4" alt=""> -->
+        </div>
+      </div>
+      <div class="col-md-9 m-auto">
+        <a class="lmm_arrow_btn mt-5 ml-n5" routerLink="caseStudy">view all projects</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <img src="" alt=""> -->
+<div class="home_services">
+  <div class="container-fluid">
+    <div class="row pb-5">
+      <div class="col-md-12">
+        <div class="scrolltrigger m-0 p-0">
+          <h1 class="m-0 lmm_h1_stroke">
+            <app-scrolltide content="services" type="text" time="2"></app-scrolltide>
+          </h1>
+        </div>
+        <p class="m-auto text-justify">Design thinking, cohesive strategies and cutting-edge technologies infused with innovative experiences engage your target audiences in the most fascinating ways. The result? Positive awareness, fans acquired, a growing business and other important stuff. In the constantly changing marketplace, we build fresh brands that build trust, designs that always captivate, marketing that goes beyond conversions and technologies that challenge the status quo / make a statement.
+          <a href="" class="mt-5 d-flex justify-content-end"><app-lmm-button ButtonText="view services" link="services"></app-lmm-button></a>
+        </p>
+      </div>
+    </div>
+    <div class="row mt-5 mb-5 pt-5">
+      <div class="col-md-10 m-auto">
+        <div class="row my-5 pb-5 pt-5" *ngFor="let item of servicesData">
+          <div class="col-md-6  pl-5">
+            <h1 class="lmm_h5 ml-5">{{item.heading}}</h1>
+            <ul class=" ml-5" [innerHTML]="item.content">
+            </ul>
+          </div>
+          <div class="col-md-6 position-relative">
+            <div class="lottie">
+              <lottie-player class="lottie_player lottie_design" [id]="item.id" [src]="item.lottieUrl" loop></lottie-player>
+            </div>
+          </div>
+          <a class="lmm_arrow_btn ml-5 mt-4" routerLink='service/{{item.title}}'>view more</a>
+        </div>
+      </div>
+      <div class="lmm_marquee_plugin">
+        <app-rail-text text="we make cool websites and apps."></app-rail-text>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lmm_landing_3">
+<div class="container-fluid">
+  <div class="skating">
+    <div class="skatingImg">
+      <app-scrolltide content="../../../assets/media/images/skateman0118.png" type="image" time="-5"></app-scrolltide>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <div class="skating_title">
+          <span class="lmm_h1 text-white d-block">loud</span>
+          <span class="lmm_h1 text-white d-block my-n4">mob</span>
+          <span class="lmm_h1 text-white d-block">labs</span>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <div class="skating_des m-auto pr-5">
+            <p class="text-justify text-white mb-5 pb-5">At Loud Mob Labs we  make targeted marketing smarter with our homegrown products. Exploiting the latest technological advancements like Facial recognition and augmented reality, we create an emotional connect with your consumers.</p>
+            <a href="" class="ml-auto mt-n5 d-flex justify-content-end"><app-lmm-button ButtonText="our labs" link="loudMobLab"></app-lmm-button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="client">
+    <h1 class="lmm_h5 text-white">our clients</h1>
+    <div class="slider d-flex mt-5">
+      <img src="../../../assets/media/images/Asset 39.png" alt="">
+      <img src="../../../assets/media/images/Asset 39.png" alt="">
+    </div>
+  </div>
+</div>
+</div>
+<div class="lmm_cursor fa" #cursor>
+  <span></span>
+</div>
+

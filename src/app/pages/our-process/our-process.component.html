@@ -1,0 +1,47 @@
+<div class="hero_banner ourProcess_banner">
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <div class="col-md-10 m-auto h-100 d-flex justify-content-center align-items-center">
+        <div class="banner_content">
+          <h1 class="lmm_h1_stroke text-center">OUR PROCESS</h1>
+          <p class="text-justify">They’re results on the long, rocky, sometimes uncertain but always inspired road to creative excellence at Loud Mob Media. Why we do what we do says a lot about us, but doing what we do is intricate work and that’s precisely why our process is our plan, and our insights on market shifts, competitive landscape and understanding of what the people want, our critical guideposts. In doing this, loud stories that you can step inside of are brilliantly designed and inventively delivered to remarkably engage key audiences worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ourprocess mb-5 pb-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="ourprocess_lottie" *ngFor="let item of ourprocessdata">
+          <lottie-player [src]="item.lottieURl" [id]="item.id" speed="10" loop></lottie-player>
+          <div class="content_box">
+            <h1>{{item.heading}}</h1>
+            <p>{{item.peragraph}}</p>
+            <a class="d-flex pt-4" [class]='item.class' *ngIf="item.button"><app-lmm-button [ButtonText]="item.buttonContent" [link]="item.href"></app-lmm-button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="ourprocess_wrap_1 footer_monkey d-flex justify-content-center align-items-center">
+  <div class="container-fluid">
+    <div class="landing_footer">
+      <div class="row position-relative">
+        <div class="footer_des w-50 m-auto">
+          <p class="text-white text-left">Have a project in mind?</p>
+          <span class="lmm_h1 text-white my-5 d-block">We’re excited to hear all about your brand!</span>
+          <a href="" class="d-block mt-5"><app-lmm-button ButtonText="let's talk" link="/contact"></app-lmm-button></a>
+        </div>
+        <div class="footer_video ml-auto">
+          <video src="../../../assets/media/video/footer_jumpingvideo.mp4" #monkeyVideo muted autoplay loop></video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="height: 200px;"></div> -->
+<!--========== social ICon=========== -->
+<!-- <app-social-sites></app-social-sites> -->

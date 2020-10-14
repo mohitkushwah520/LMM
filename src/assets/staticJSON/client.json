@@ -1,0 +1,27 @@
+[
+  {
+    "id" : 1,
+    "name":"",
+    "imageUrl": "../../../assets/media/images/client/client1.png"
+  },
+  {
+    "id" : 2,
+    "name":"",
+    "imageUrl": "../../../assets/media/images/client/client2.png"
+  },
+  {
+    "id" : 3,
+    "name":"",
+    "imageUrl": "../../../assets/media/images/client/client3.png"
+  },
+  {
+    "id" : 4,
+    "name":"",
+    "imageUrl": "../../../assets/media/images/client/client4.png"
+  },
+  {
+    "id" : 5,
+    "name":"",
+    "imageUrl": "../../../assets/media/images/client/client5.png"
+  }
+]

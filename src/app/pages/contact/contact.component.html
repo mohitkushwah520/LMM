@@ -1,0 +1,139 @@
+<div class="hero_banner contact_banner">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-4 d-flex align-items-center">
+              <div class="content_box w-100">
+                  <h1 class="lmm_h1 text-white">CONTACT US</h1>
+                  <p class="text-justify text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam inventore necessitatibus debitis excepturi at aperiam dicta quo esse fuga non harum architecto ipsam perferendis ipsa eligendi sequi modi nisi nulla eaque, quidem ullam velit quae tenetur. Ipsam illo libero quae nesciunt deleniti facilis earum, et quos delectus odio repellendus sed!</p>
+              </div>
+          </div>
+          <video src="../../../assets/media/video/footer_jumpingvideo.mp4" autoplay muted loop></video>
+      </div>
+  </div>
+</div>
+<div class="contact_wrap_1">
+  <div class="container-fluid">
+    <div class="row my-5 py-5">
+      <!-- <h1 class="lmm_h1_stroke text-uppercase">how can we help you ?</h1> -->
+      <div class="lmm_marquee_plugin"><app-rail-text text="how can we help you ?"></app-rail-text></div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 m-auto text-center">
+        <form [formGroup]='contactform' (ngSubmit)='onSubmit()'>
+          <div formGroupName='services'>
+            <div class="services">
+              <h1 class="lmm_h5">services</h1>
+              <div class="service_group d-flex justify-content-center align-items-center my-5 py-5">
+                <div class="checkbox mx-5" *ngFor="let item of servicsContent">
+                  <input type="checkbox" [name]="item.name" [id]="item.name" (change)="onChange(item.name, $event.target.checked)">
+                  <label class="lmm_btn d-inline-block" [for]="item.name">{{item.name}}</label>
+                </div>
+              </div>
+            </div>
+            <div class="products">
+              <h1 class="lmm_h5">products</h1>
+              <div class="service_group d-flex justify-content-center align-items-center my-5 py-5">
+                <div class="checkbox mx-5" *ngFor="let item of products">
+                  <input type="checkbox" [name]="item.name" [id]="item.name" (change)="onChange(item.name, $event.target.checked)">
+                  <label class="lmm_btn d-inline-block" [for]="item.name">{{item.name}}</label>
+                </div>
+              </div>
+            </div>
+            <div class="hire">
+              <h1 class="lmm_h5">join the mob</h1>
+              <div class="service_group d-flex justify-content-center align-items-center my-5 py-5">
+                <div class="checkbox mx-5" *ngFor="let item of hire">
+                  <input type="checkbox" [name]="item.name" [id]="item.name" (change)="onChange(item.name, $event.target.checked)">
+                  <label class="lmm_btn d-inline-block" [for]="item.name">{{item.name}}</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-field">
+            <div class="row">
+              <div class="col-md-6">
+                <span class="input input--nao">
+                  <input class="input__field input__field--nao" type="text" id="name" formControlName='name'/>
+                  <label class="input__label input__label--nao" for="name">
+                      <span class="input__label-content input__label-content--nao">name</span>
+                  </label>
+                  <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                      <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+                  </svg>
+                </span>
+                <div class="contact_form_validation" *ngIf="name.invalid && name.touched">
+                  <small class="text-danger" *ngIf="name.errors ?.required">Name must be required</small>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <span class="input input--nao">
+                  <input class="input__field input__field--nao" type="email" id="email" formControlName='email'/>
+                  <label class="input__label input__label--nao" for="email">
+                      <span class="input__label-content input__label-content--nao">email</span>
+                  </label>
+                  <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                      <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+                  </svg>
+                </span>
+                <div class="contact_form_validation" *ngIf="email.invalid && email.touched">
+                  <small class="text-danger" *ngIf="email.errors ?.required">Email must be required</small>
+                  <small class="text-danger" *ngIf="email.errors ?.pattern">Email must be containe</small>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <span class="input input--nao">
+                  <input class="input__field input__field--nao" type="text" id="phoneNumber" formControlName='phoneNumber'/>
+                  <label class="input__label input__label--nao" for="phoneNumber">
+                      <span class="input__label-content input__label-content--nao">phone numbar</span>
+                  </label>
+                  <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                      <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+                  </svg>
+                </span>
+                <div class="contact_form_validation" *ngIf="phoneNumber.valid || phoneNumber.touched">
+                  <small class="text-danger" *ngIf="phoneNumber.errors ?.required">Phone Number must be required</small>
+                  <small class="text-danger" *ngIf="phoneNumber.errors ?.pattern">regix</small>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <span class="input input--nao">
+                  <input class="input__field input__field--nao" type="text" id="companyName" formControlName='companyName'/>
+                  <label class="input__label input__label--nao" for="companyName">
+                      <span class="input__label-content input__label-content--nao">company name</span>
+                  </label>
+                  <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                      <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="col-md-10 m-auto">
+                  <div class="text_area text-left">
+                      <label for="message">message</label>
+                      <textarea name="" id="" cols="185" rows="20" formControlName='message'></textarea>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="row my-5 py-5">
+            <div class="col-md-12">
+              <button class="lmm_btn m-auto" [disabled]="contactform.invalid" type="submit">send</button>
+
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="contact_footer_wrap bg-dark">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 m-auto text-center">
+        <p class="text-white">send us an email at</p>
+        <a href="" class="lmm_h5 text-white">connect@loudmob.media</a>
+        <p class="mt-5 text-white">drop by at our office</p>
+        <a href="" class="lmm_h5 text-white">c-34, Liberty Phase 2, Koregaon Park, Pune.</a>
+      </div>
+    </div>
+  </div>
+</div>
