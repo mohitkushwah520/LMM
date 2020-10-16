@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { OurworkService }from '../../services/ourwork.service';
-import { Ourwork }from '../../modal/ourwork';
-import { viewClassName } from '@angular/compiler';
+// import { OurworkService }from '../../services/ourwork.service';
+// import { Ourwork }from '../../modal/ourwork';
+// import { viewClassName } from '@angular/compiler';
 import { MatTabGroup } from '@angular/material/tabs';
 
 @Component({
@@ -15,21 +15,21 @@ export class OurWorkComponent implements OnInit {
   @ViewChild('cursor')cursor : ElementRef;
   @ViewChild('matTabGroup')matTabGroup : MatTabGroup;
   @ViewChild('mainVideo')mainVideo : ElementRef;
+  @ViewChild('render')render : ElementRef;
   public workdata :any;
-  constructor(private ourwork : OurworkService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.ourwork.workdetail().subscribe((data:Ourwork) => {
-      this.workdata = data;
-      console.log(data)
+    var allVideo = document.querySelectorAll('video');
+    allVideo.forEach((el)=>{
+      var video = el as HTMLVideoElement
+      video.muted = true;
+      video.play
     })
   }
   ngAfterViewInit(): void{
    this.cursorAnimation();
    this.Cursor_lmm_arrow_link();
-  //  window.setTimeout(()=>{
-  //   document.querySelectorAll('.mat-tab-label')[0].classList.add('active')
-  // },1000)
   }
 
   cursorAnimation(){

@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { AllServicesService }from '../../services/all-services.service';
 
 @Component({
   selector: 'app-video',
@@ -10,14 +11,28 @@ export class VideoComponent implements OnInit {
   @Input()src : string;
 
   @ViewChild('video')video : ElementRef<HTMLVideoElement>;
-  constructor() { }
+  constructor(private service : AllServicesService) { }
 
   public red = 'primary';
-  ngOnInit(): void {}
+
+  public data : any ;
+
+  ngOnInit(): void {
+
+    this.service.home_client().subscribe(data=>{
+      // console.log(data)
+      this.data = data;
+    })
+
+  }
+
+
+
+
   ngAfterViewInit(): void{
     var time = 0.15;
     let scrollPosition = window.scrollY;
-    console.log(scrollPosition)
+    // console.log(scrollPosition)
    window.addEventListener('scroll',()=>{
     var video = this.video.nativeElement;
     var top = video.getBoundingClientRect().top

@@ -1,9 +1,9 @@
 [
   {
     "ourRecent" : [
-      {"id" : "lottieOne" , "description" : "Hic nisi a mollitia. Necessitatibus earum laboriosam repudiandae ex debitis voluptatibus magni ?" , "lottieURL":"assets/media/json/home/lotti_eyehop.json" , "src" : "../../../assets/media/video/services/eyehop.mp4"},
-      {"id" : "lottieTwo" , "description" : "Hic nisi a mollitia. Necessitatibus earum laboriosam repudiandae ex debitis voluptatibus magni ?" , "lottieURL":"assets/media/json/home/lotti_persona.json" , "src" : "../../../assets/media/video/services/persona.mp4"},
-      {"id" : "lottieThree" , "description" : "Hic nisi a mollitia. Necessitatibus earum laboriosam repudiandae ex debitis voluptatibus magni ?" , "lottieURL":"assets/media/json/home/lottie_cocoalite.json" , "src" : "../../../assets/media/video/services/cocoalite.mp4"}
+      {"id" : "lottieOne" , "description" : "Hic nisi a mollitia. Necessitatibus earum laboriosam repudiandae ex debitis voluptatibus magni ?" , "lottieURL":"assets/media/json/home/New_folder/lotti_eyehop.json" , "src" : "../../../assets/media/video/services/eyehop.mp4"},
+      {"id" : "lottieTwo" , "description" : "Hic nisi a mollitia. Necessitatibus earum laboriosam repudiandae ex debitis voluptatibus magni ?" , "lottieURL":"assets/media/json/home/New_folder/lotti_persona.json" , "src" : "../../../assets/media/video/services/persona.mp4"},
+      {"id" : "lottieThree" , "description" : "Hic nisi a mollitia. Necessitatibus earum laboriosam repudiandae ex debitis voluptatibus magni ?" , "lottieURL":"assets/media/json/home/New_folder/lottie_cocoalite.json" , "src" : "../../../assets/media/video/services/cocoalite.mp4"}
     ]
   },
   {

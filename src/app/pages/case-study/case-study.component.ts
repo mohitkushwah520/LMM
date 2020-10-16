@@ -74,7 +74,7 @@ export class CaseStudyComponent implements OnInit {
 
   constructor(private serv : OurworkService) { }
   ngOnInit(): void {
-    this.serv.workdetail().subscribe((data)=>{
+    this.serv.ourprocess().subscribe((data)=>{
       // this.footerVideo.nativeElement.play();
       create({
         mode: 'scroll',

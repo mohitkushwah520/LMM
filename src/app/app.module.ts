@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule }from '@angular/forms';
+import { OurWorkModule } from './pages/our-work/our-work.module'
 
 
 
@@ -11,7 +12,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ServicesComponent } from './pages/services/services.component';
-import { OurWorkComponent } from './pages/our-work/our-work.component';
+// import { OurWorkComponent } from './pages/our-work/our-work.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule }from '@angular/material/dialog';
@@ -40,7 +41,7 @@ import { ScrolltideComponent } from './plugins/scrolltide/scrolltide.component';
     FooterComponent,
     HomeComponent,
     ServicesComponent,
-    OurWorkComponent,
+    // OurWorkComponent,
     BlogsComponent,
     LmmDialogComponent,
     AboutUsComponent,
@@ -66,13 +67,15 @@ import { ScrolltideComponent } from './plugins/scrolltide/scrolltide.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    MatDialogModule
+    MatDialogModule,
+    OurWorkModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   schemas : [
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA
-  ]
+  ],
+  exports : []
 })
 export class AppModule { }

@@ -52,8 +52,8 @@
       <div class="col-md-9 m-auto">
         <div class="our_recent_card" *ngFor="let item of our_recent">
           <p class="w-50">{{item.description}}</p>
-          <!-- <lottie-player [src]="item.lottieURL" [id]="item.id" speed="10" loop (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()"></lottie-player> -->
-          <app-video [src]='item.src'></app-video>
+          <lottie-player [src]="item.lottieURL" [id]="item.id" speed="10" loop (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()"></lottie-player>
+          <!-- <app-video [src]='item.src'></app-video> -->
           <!-- <img src="../../../assets/media/video/services/cocoalite.mp4" alt=""> -->
         </div>
       </div>

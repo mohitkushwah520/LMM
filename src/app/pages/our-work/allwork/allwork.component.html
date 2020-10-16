@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-6 my-5" *ngFor="let item of workData.images">
+    <div class="work-card">
+      <div class="work-card-img">
+        <img [src]="item.image" alt="" *ngIf="item.imageType == 'static'">
+        <video muted autoplay loop *ngIf="item.imageType == 'video'" #video>
+          <source [src]="item.image" type="video/mp4">
+        </video>
+      </div>
+      <!-- <div class="work-card-video">
+        <video src="https://apis.loudmob.media/work/apps/1.mp4" muted autoplay loop ></video>
+      </div> -->
+    </div>
+  </div>
+</div>

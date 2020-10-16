@@ -16,13 +16,9 @@ export class HomeComponent implements OnInit  {
   @ViewChild('herovideo') herovideo : ElementRef;
   @ViewChild('mainVideo') mainVideo : ElementRef;
   @ViewChild('shortReel') shortReel : ElementRef;
-  // @ViewChild('footerVideo')footerVideo : ElementRef;
   @ViewChild('title')title : ElementRef;
   @ViewChild('btn')btn : ElementRef;
 
-  // @ViewChild('showreel')showreel : ElementRef;
-  // @ViewChild('services')services : ElementRef;
-  // @ViewChild('skating')skating : ElementRef;
   @ViewChild('cursor')cursor : ElementRef;
 
 
@@ -38,7 +34,7 @@ export class HomeComponent implements OnInit  {
         data => {
           this.our_recent = data;
           window.setTimeout(this.lot,1000);
-          // this.gsapScrollTrigger();
+          this.gsapAnimationOnLoad();
         },
         err => {console.log(err)}
       )//ourRecent
@@ -53,7 +49,7 @@ export class HomeComponent implements OnInit  {
     }
 
   ngAfterViewInit(): void{
-    this.gsapAnimationOnLoad();
+    // this.gsapAnimationOnLoad();
     // this.gsapScrollTrigger();
     this.video();
     window.addEventListener('load',this.lot);
@@ -62,54 +58,54 @@ export class HomeComponent implements OnInit  {
    }//afterVierInit
 
   lot(){
-    // create({
-    //   mode: 'scroll',
-    //   player: '#lottieOne',
-    //   actions: [
-    //     {
-    //       visibility:[0,0.1],
-    //       type: 'stop',
-    //       frames: [0]
-    //     },
-    //     {
-    //       visibility:[0.1,1],
-    //       type: 'seek',
-    //       frames: [0],
-    //     }
-    //   ],
-    // });
-    // create({
-    //   mode: 'scroll',
-    //   player: '#lottieTwo',
-    //   actions: [
-    //     {
-    //       visibility:[0,0.1],
-    //       type: 'stop',
-    //       frames: [0]
-    //     },
-    //     {
-    //       visibility:[0.1,1],
-    //       type: 'seek',
-    //       frames: [0],
-    //     }
-    //   ],
-    // });
-    // create({
-    //   mode: 'scroll',
-    //   player: '#lottieThree',
-    //   actions: [
-    //     {
-    //       visibility:[0,0.1],
-    //       type: 'stop',
-    //       frames: [0]
-    //     },
-    //     {
-    //       visibility:[0.1,1],
-    //       type: 'seek',
-    //       frames: [0],
-    //     }
-    //   ],
-    // });
+    create({
+      mode: 'scroll',
+      player: '#lottieOne',
+      actions: [
+        {
+          visibility:[0,0.1],
+          type: 'stop',
+          frames: [0]
+        },
+        {
+          visibility:[0.1,1],
+          type: 'seek',
+          frames: [0],
+        }
+      ],
+    });
+    create({
+      mode: 'scroll',
+      player: '#lottieTwo',
+      actions: [
+        {
+          visibility:[0,0.1],
+          type: 'stop',
+          frames: [0]
+        },
+        {
+          visibility:[0.1,1],
+          type: 'seek',
+          frames: [0],
+        }
+      ],
+    });
+    create({
+      mode: 'scroll',
+      player: '#lottieThree',
+      actions: [
+        {
+          visibility:[0,0.1],
+          type: 'stop',
+          frames: [0]
+        },
+        {
+          visibility:[0.1,1],
+          type: 'seek',
+          frames: [0],
+        }
+      ],
+    });
     create({
       mode: 'scroll',
       player: '#LottieDesign',

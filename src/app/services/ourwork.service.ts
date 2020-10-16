@@ -8,17 +8,25 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class OurworkService {
-  private workUrl = 'http://13.126.112.148:5656/workdetail';
+  private workUrl = 'http://13.126.112.148:5656/';
   private blogsUrl = 'http://13.126.112.148:5656/blogs';
 
 
   constructor(private http : HttpClient) { }
 
-  workdetail() : Observable<Ourwork>{
-    return this.http.get<Ourwork>(this.workUrl).pipe(map(res =>{
-      var data = Object.entries(res)[1]
-      return data[1];
-    }));
+  // workdetail() : Observable<Ourwork>{
+  //   return this.http.get<Ourwork>(this.workUrl).pipe(map(res =>{
+  //     var data = Object.entries(res)[1]
+  //     return data[1];
+  //   }));
+  // }
+  ourWork(slug): Observable<Ourwork>{
+    return this.http.get<Ourwork>(this.workUrl+slug).pipe(
+      map(res=>{
+        var dd = Object.entries(res)[1]
+        return dd[1]
+      })
+    );
   }
 
   getblogsdetail(){

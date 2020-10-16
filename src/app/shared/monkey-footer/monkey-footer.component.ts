@@ -15,6 +15,12 @@ export class MonkeyFooterComponent implements OnInit {
   ngOnInit(): void {
   }
   ngAfterViewInit(): void{
+    var allvideo = document.querySelectorAll('video');
+    allvideo.forEach((el)=>{
+      var video = el as HTMLVideoElement;
+      video.muted = true;
+      video.play();
+    })
     this.monkeyVideo.nativeElement.play = true;
     window.addEventListener('scroll',()=>{
       this.monkeyVideo.nativeElement.play = true;

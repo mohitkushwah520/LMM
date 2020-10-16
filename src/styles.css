@@ -711,7 +711,59 @@ button.video_btn.mute::after{
 .ourwork_banner .content_box a.lmm_arrow_btn::after{
   left: -90%;
 }
-.ourwork_tabs img{
+/* .ourwork_tabs .nav-tabs{
+  border: none;
+  font: 2rem VHeavy ,sans-serif !important;
+}
+ .ourwork_tabs .nav-link.active ,.ourwork_tabs .nav-link{
+   position: relative;
+   border: none;
+  font: 2rem VHeavy ,sans-serif !important;
+  margin: 1rem 2rem;
+}
+.ourwork_tabs .nav-link span{
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #232323;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.2s all linear;
+  transform-origin: left bottom;
+}
+.ourwork_tabs .nav-link:hover span{
+  width: 100%;
+}
+.ourwork_tabs .tab-content{
+  margin: 5rem 2.5rem 7rem 2.8rem;
+} */
+.ourwork_tabs .tabs{
+  display: flex;
+  margin-bottom: 7rem;
+}
+.ourwork_tabs .tabs li{
+  display: inline;
+}
+.ourwork_tabs .tabs li a{
+  font: 2rem VHeavy ,sans-serif !important;
+  margin: 5rem 2.5rem 7rem 2.8rem;
+}
+.ourwork_tabs .tabs li a.active{
+  color: #232323;
+}
+.ourwork_tabs .tabs li a:hover{
+  color: #232323;
+}
+.work-card-img img,.work-card-img video{
+  width: 50rem;
+  height: 50rem;
+  margin: auto;
+}
+/* .ourwork_tabs .nav-link{
+  border
+} */
+/* .ourwork_tabs img{
   width: 100%;
   height: 100%;
 }
@@ -741,7 +793,7 @@ button.video_btn.mute::after{
   height: 100%;
   background: rgba(100,100,100,0.3);
   display: none;
-}
+} */
 /* .ourwork_tabs .media:hover::after{
   display: block;
 } */
@@ -1430,3 +1482,14 @@ section.about p{
 .scrolltideText{
   width: 100%;
 }
+
+
+/* =====bootstrap changes======== */
+/* ==for tabs our work====== */
+
+/* .nav-tabs:hover .nav-link.active:hover{
+  border: none;
+}
+.nav-tabs .nav-link {
+  border: none;
+} */

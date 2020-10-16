@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { from } from 'rxjs';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
 import { BlogsComponent } from './pages/blogs/blogs.component';
@@ -15,53 +16,52 @@ import { LmmButtonComponent } from './plugins/lmm-button/lmm-button.component';
 import { RailTextComponent } from './plugins/rail-text/rail-text.component';
 import { ScrolltideComponent } from './plugins/scrolltide/scrolltide.component';
 import { VideoComponent } from './plugins/video/video.component';
+// import { }from ''
 
 
 const routes: Routes = [
   {
     path : '',
     component : HomeComponent
+  },
+  {
+    path : 'plugins',
+    component : VideoComponent
+  },
+  {
+    path : 'services',
+    component : ServicesComponent
+  },
+
+  {
+    path : 'blogs',
+    component : BlogsComponent
+  },
+  {
+    path : 'aboutUs',
+    component : AboutUsComponent
+  },
+  {
+    path : 'ourProcess',
+    component : OurProcessComponent
+  },
+  {
+    path : 'contact',
+    component : ContactComponent
+  },
+  {
+    path : 'loudMobLab',
+    component : LoudMobLabComponent
+  },
+  {
+    path : 'service/:slug',
+    component : ServiceDetailComponent
+  },
+  {
+    path : 'blog/:id',
+    component : BlogDetailComponent
   }
-  // {
-  //   path : 'services',
-  //   component : ServicesComponent
-  // },
-  // {
-  //   path : 'ourwork',
-  //   component : OurWorkComponent
-  // },
-  // {
-  //   path : 'blogs',
-  //   component : BlogsComponent
-  // },
-  // {
-  //   path : 'aboutUs',
-  //   component : AboutUsComponent
-  // },
-  // {
-  //   path : 'ourProcess',
-  //   component : OurProcessComponent
-  // },
-  // {
-  //   path : 'contact',
-  //   component : ContactComponent
-  // },
-  // {
-  //   path : 'loudMobLab',
-  //   component : LoudMobLabComponent
-  // },
-  // {
-  //   path : 'service/:slug',
-  //   component : ServiceDetailComponent
-  // },
-  // {
-  //   path : 'blog/:id',
-  //   component : BlogDetailComponent
-  // },
-  // {
-  //   path : 'plugins',
-  //   component : VideoComponent
-  // }
+
 ];
 
 @NgModule({

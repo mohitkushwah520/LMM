@@ -6,7 +6,7 @@
                 <span class="lmm_h1 d-block">our</span>
                 <span class="lmm_h1 d-block">work</span>
                 <a routerLink="/services" class="lmm_arrow_btn">view services</a>
-                <a href="" class="mt-5 d-block" (click)="videoOpen()"><app-lmm-button ButtonText="showreel"></app-lmm-button></a>
+                <!-- <a href="" class="mt-5 d-block" (click)="videoOpen()"><app-lmm-button ButtonText="showreel"></app-lmm-button></a> -->
               </div>
           </div>
           <div class="col-md-6 ml-auto">
@@ -33,21 +33,43 @@
     </div>
   </div>
 </div> -->
-<div class="ourwork_tabs">
+<!-- <div class="ourwork_tabs">
+  <div *ngFor="let items of workdata">
+    <div *ngFor="let item of items.images">
+      <p>{{item | json}}</p>
+      <img [src]="item.image" alt="" *ngIf="item.imageType === 'static'" style="width: 100px;height: 100px;">
+    </div>
+  </div>
   <mat-tab-group mat-align-tabs="center" selectedIndex='1' [disableRipple]="true" #matTabGroup>
     <mat-tab [label]="item.workCategory"  *ngFor="let item of workdata">
-      <div class="row mt-5 pt-5">
+      <div class="row mt-5 pt-5" #render id="render">
         <div class="col-md-6 d-flex-row justify-content-center align-items-center my-5" *ngFor="let itemdetail of item.images">
-          <div class="media" *ngIf="itemdetail.imageType === 'static'">
+          <div class="media" *ngIf="itemdetail.imageType === 'static'" >
             <img [src]="itemdetail.image" alt="">
           </div>
           <div class="media" *ngIf="itemdetail.imageType === 'video'">
-            <video [src]="itemdetail.image"loop #video></video>
+            <video [src]="itemdetail.image" autoplay muted loop #video></video>
           </div>
         </div>
       </div>
     </mat-tab>
   </mat-tab-group>
+</div> -->
+<div class="ourwork_tabs">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 m-auto">
+        <ul class="tabs">
+          <li><a class="tab_btn" routerLink="allwork" routerLinkActive="active">all work</a></li>
+          <li><a class="tab_btn" routerLink="brandingwork" routerLinkActive="active">branding</a></li>
+          <li><a class="tab_btn" routerLink="motionwork" routerLinkActive="active">motion</a></li>
+          <li><a class="tab_btn" routerLink="staticwork" routerLinkActive="active">static</a></li>
+          <li><a class="tab_btn" routerLink="appwork" routerLinkActive="active">app</a></li>
+        </ul>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="lmm_cursor fa" #cursor>
   <span></span>
