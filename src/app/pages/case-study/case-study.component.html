@@ -1,14 +1,20 @@
 <div class="hero_banner caseStudy_banner">
   <video src="../../../assets/media/video/short_video.mp4"  muted loop autoplay #bannerVideo></video>
+  <div class="scroll" (click)="scroll()">
+    <p class="mb-n5 text-white pb-2">scroll down</p>
+    <lottie-player src="/assets/media/lottie_files/caseStudy/newsceroll.json" class="lottie" autoplay speed="1" loop></lottie-player>
+  </div>
 </div>
+
 <section class="casestudy">
   <div class="caseStudy_wrap_1">
     <div class="container-fluid">
       <div class="row py-5">
-        <div class="col-md-10 m-auto py-5 my-5">
+        <div class="col-md-9 m-auto py-5 my-5">
           <div class="lottie_box" [routerLink]="item.href" *ngFor="let item of caseStudy" (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()">
-            <lottie-player [id]="item.id" [src]="item.lottieUrl" loop></lottie-player>
-            <h1 class="lmm_h1 text-white">{{item.title | uppercase}}</h1>
+            <!-- <lottie-player [id]="item.id" [src]="item.lottieUrl" loop></lottie-player> -->
+            <app-lottie [lottie_src]="item.lottie_src" [img_src]="item.img_src" [id]="item.id" [imgVisible]="true"></app-lottie>
+            <h1 class="lmm_h1 text-white">{{item.title}}</h1>
           </div>
         </div>
       </div>

@@ -2,36 +2,39 @@
   {
     "id" : "caseStudy1",
     "title" : "persona",
-    "lottieUrl" : "https://assets3.lottiefiles.com/packages/lf20_8izyldes.json"
+    "lottie_src" : "assets/media/lottie_files/caseStudy/lotti_persona.json",
+    "img_src" : "assets/media/images/caseStudy/lottie_persona_cover.png"
   },
   {
     "id" : "caseStudy2",
     "title" : "mymee",
-    "lottieUrl" : "https://assets3.lottiefiles.com/packages/lf20_8izyldes.json"
+    "lottie_src" : "https://assets3.lottiefiles.com/packages/lf20_8izyldes.json"
   },
   {
     "id" : "caseStudy3",
     "title" : "bytbond",
-    "lottieUrl" : "https://assets3.lottiefiles.com/packages/lf20_8izyldes.json"
+    "lottie_src" : "https://assets3.lottiefiles.com/packages/lf20_8izyldes.json"
   },
   {
     "id" : "caseStudy4",
     "title" : "cocoalite",
-    "lottieUrl" : "https://assets3.lottiefiles.com/packages/lf20_8izyldes.json"
+    "lottie_src" : "assets/media/lottie_files/caseStudy/lottie_cocoalite.json",
+    "img_src" : "assets/media/images/caseStudy/lottie_cocoalite_cover.png"
   },
   {
     "id" : "caseStudy5",
     "title" : "caseStudy5",
-    "lottieUrl" : "https://assets3.lottiefiles.com/packages/lf20_8izyldes.json"
+    "lottie_src" : "https://assets3.lottiefiles.com/packages/lf20_8izyldes.json"
   },
   {
     "id" : "caseStudy6",
     "title" : "bytbond",
-    "lottieUrl" : "https://assets3.lottiefiles.com/packages/lf20_8izyldes.json"
+    "lottie_src" : "https://assets3.lottiefiles.com/packages/lf20_8izyldes.json"
   },
   {
     "id" : "caseStudy7",
     "title" : "eye hop",
-    "lottieUrl" : "https://assets3.lottiefiles.com/packages/lf20_8izyldes.json"
+    "lottie_src" : "assets/media/lottie_files/caseStudy/lotti_eyehop.json",
+    "img_src" : "assets/media/images/caseStudy/lottie_eyehop_cover.png"
   }
 ]

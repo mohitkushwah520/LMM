@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService }from '../../services/service.service';
 
 @Component({
   selector: 'app-services',
@@ -7,13 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesComponent implements OnInit {
 
-  public data = [1,2,3,4]
+  public services:any = []
 
-  constructor() {
+  constructor(private service : ServiceService) {
 
   }
 
   ngOnInit(): void {
+    var allVideo = document.querySelectorAll('video');
+    allVideo.forEach((el)=>{
+      var video = el as HTMLVideoElement;
+      video.muted = true;
+      video.play;
+    })
+    this.service.getservice().subscribe(data =>{
+      this.services = data
+    })
 
   }
   ngAfterViewInit():void{

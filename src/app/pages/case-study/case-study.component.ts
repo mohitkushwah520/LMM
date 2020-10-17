@@ -1,6 +1,6 @@
 import { viewClassName } from '@angular/compiler';
 import { Component, ElementRef, OnInit, ViewChild  } from '@angular/core';
-import { create } from '@lottiefiles/lottie-interactivity';
+// import { create } from '@lottiefiles/lottie-interactivity';
 import { OurworkService }from '../../services/ourwork.service';
 
 @Component({
@@ -16,212 +16,221 @@ export class CaseStudyComponent implements OnInit {
   public caseStudy = [
     {
       id : 'caseStudy1',
-      title : 'cocalite',
-      href : 'cocalite',
-      lottieUrl : 'assets/media/json/home/lottie_cocoalite.json'
+      title : 'cocoalite',
+      href : 'cocoalite',
+      lottie_src : "assets/media/lottie_files/caseStudy/lottie_cocoalite.json",
+      img_src : "assets/media/images/caseStudy/lottie_cocoalite_cover.png"
     },
     {
       id : 'caseStudy2',
       title : 'persona',
       href : 'persona',
-      lottieUrl : 'assets/media/json/home/lotti_persona.json'
+      lottie_src : "assets/media/lottie_files/caseStudy/lotti_persona.json",
+      img_src : "assets/media/images/caseStudy/lottie_persona_cover.png"
     },
     {
       id : 'caseStudy3',
       title : 'bytbond',
       href : 'bytbond',
-      lottieUrl : 'https://assets3.lottiefiles.com/packages/lf20_8izyldes.json'
+      lottie_src : 'https://assets3.lottiefiles.com/packages/lf20_8izyldes.json',
+      img_src:"assets/media/images/caseStudy/clone.jpg"
     },
 
     {
       id : 'caseStudy4',
       title : 'mymee',
       href : 'mymee',
-      lottieUrl : 'https://assets3.lottiefiles.com/packages/lf20_8izyldes.json'
+      lottie_src : 'https://assets3.lottiefiles.com/packages/lf20_8izyldes.json',
+      img_src:"assets/media/images/caseStudy/clone.jpg"
     },
     {
       id : 'caseStudy5',
       title : 'rapidale',
       href : 'rapidale',
-      lottieUrl : 'https://assets3.lottiefiles.com/packages/lf20_8izyldes.json'
+      lottie_src : 'https://assets3.lottiefiles.com/packages/lf20_8izyldes.json',
+      img_src:"assets/media/images/caseStudy/clone.jpg"
     },
 
     {
       id : 'caseStudy6',
       title : 'eye hop',
       href : 'eyehop',
-      lottieUrl : 'assets/media/json/home/lotti_eyehop.json'
+      lottie_src : "assets/media/lottie_files/caseStudy/lotti_eyehop.json",
+      img_src : "assets/media/images/caseStudy/lottie_eyehop_cover.png"
     },
     {
       id : 'caseStudy7',
       title : 'milk paint',
       href : 'milkpaint',
-      lottieUrl : 'https://assets3.lottiefiles.com/packages/lf20_8izyldes.json'
+      lottie_src : 'https://assets3.lottiefiles.com/packages/lf20_8izyldes.json',
+      img_src:"assets/media/images/caseStudy/clone.jpg"
     },
     {
       id : 'caseStudy8',
       title : 'urbanpaws',
       href : 'urbanpaws',
-      lottieUrl : 'https://assets3.lottiefiles.com/packages/lf20_8izyldes.json'
+      lottie_src : 'https://assets3.lottiefiles.com/packages/lf20_8izyldes.json',
+      img_src:"assets/media/images/caseStudy/clone.jpg"
     },
     {
       id : 'caseStudy9',
       title : 'morning kick',
       href : 'morningkick',
-      lottieUrl : 'https://assets3.lottiefiles.com/packages/lf20_8izyldes.json'
+      lottie_src : 'https://assets3.lottiefiles.com/packages/lf20_8izyldes.json',
+      img_src:"assets/media/images/caseStudy/clone.jpg"
     }
   ]
 
   constructor(private serv : OurworkService) { }
   ngOnInit(): void {
-    this.serv.ourprocess().subscribe((data)=>{
-      // this.footerVideo.nativeElement.play();
-      create({
-        mode: 'scroll',
-        player: '#caseStudy1',
-        actions: [
-          {
-            visibility:[0,0.1],
-            type: 'stop',
-            frames: [0]
-          },
-          {
-            visibility:[0.1,1],
-            type: 'seek',
-            frames: [0],
-          }
-        ],
-      });
-      create({
-        mode: 'scroll',
-        player: '#caseStudy2',
-        actions: [
-          {
-            visibility:[0,0.1],
-            type: 'stop',
-            frames: [0]
-          },
-          {
-            visibility:[0.1,1],
-            type: 'seek',
-            frames: [0],
-          }
-        ],
-      });
-      create({
-        mode: 'scroll',
-        player: '#caseStudy3',
-        actions: [
-          {
-            visibility:[0,0.1],
-            type: 'stop',
-            frames: [0]
-          },
-          {
-            visibility:[0.1,1],
-            type: 'seek',
-            frames: [0],
-          }
-        ],
-      });
-      create({
-        mode: 'scroll',
-        player: '#caseStudy4',
-        actions: [
-          {
-            visibility:[0,0.1],
-            type: 'stop',
-            frames: [0]
-          },
-          {
-            visibility:[0.1,1],
-            type: 'seek',
-            frames: [0],
-          }
-        ],
-      });
-      create({
-        mode: 'scroll',
-        player: '#caseStudy5',
-        actions: [
-          {
-            visibility:[0,0.1],
-            type: 'stop',
-            frames: [0]
-          },
-          {
-            visibility:[0.1,1],
-            type: 'seek',
-            frames: [0],
-          }
-        ],
-      });
-      create({
-        mode: 'scroll',
-        player: '#caseStudy6',
-        actions: [
-          {
-            visibility:[0,0.1],
-            type: 'stop',
-            frames: [0]
-          },
-          {
-            visibility:[0.1,1],
-            type: 'seek',
-            frames: [0],
-          }
-        ],
-      });
-      create({
-        mode: 'scroll',
-        player: '#caseStudy7',
-        actions: [
-          {
-            visibility:[0,0.1],
-            type: 'stop',
-            frames: [0]
-          },
-          {
-            visibility:[0.1,1],
-            type: 'seek',
-            frames: [0],
-          }
-        ],
-      });
-      create({
-        mode: 'scroll',
-        player: '#caseStudy8',
-        actions: [
-          {
-            visibility:[0,0.1],
-            type: 'stop',
-            frames: [0]
-          },
-          {
-            visibility:[0.1,1],
-            type: 'seek',
-            frames: [0],
-          }
-        ],
-      });
-      create({
-        mode: 'scroll',
-        player: '#caseStudy9',
-        actions: [
-          {
-            visibility:[0,0.1],
-            type: 'stop',
-            frames: [0]
-          },
-          {
-            visibility:[0.1,1],
-            type: 'seek',
-            frames: [0],
-          }
-        ],
-      });
+    // this.serv.ourprocess().subscribe((data)=>{
+    //   // this.footerVideo.nativeElement.play();
+    //   create({
+    //     mode: 'scroll',
+    //     player: '#caseStudy1',
+    //     actions: [
+    //       {
+    //         visibility:[0,0.1],
+    //         type: 'stop',
+    //         frames: [0]
+    //       },
+    //       {
+    //         visibility:[0.1,1],
+    //         type: 'seek',
+    //         frames: [0],
+    //       }
+    //     ],
+    //   });
+    //   create({
+    //     mode: 'scroll',
+    //     player: '#caseStudy2',
+    //     actions: [
+    //       {
+    //         visibility:[0,0.1],
+    //         type: 'stop',
+    //         frames: [0]
+    //       },
+    //       {
+    //         visibility:[0.1,1],
+    //         type: 'seek',
+    //         frames: [0],
+    //       }
+    //     ],
+    //   });
+    //   create({
+    //     mode: 'scroll',
+    //     player: '#caseStudy3',
+    //     actions: [
+    //       {
+    //         visibility:[0,0.1],
+    //         type: 'stop',
+    //         frames: [0]
+    //       },
+    //       {
+    //         visibility:[0.1,1],
+    //         type: 'seek',
+    //         frames: [0],
+    //       }
+    //     ],
+    //   });
+    //   create({
+    //     mode: 'scroll',
+    //     player: '#caseStudy4',
+    //     actions: [
+    //       {
+    //         visibility:[0,0.1],
+    //         type: 'stop',
+    //         frames: [0]
+    //       },
+    //       {
+    //         visibility:[0.1,1],
+    //         type: 'seek',
+    //         frames: [0],
+    //       }
+    //     ],
+    //   });
+    //   create({
+    //     mode: 'scroll',
+    //     player: '#caseStudy5',
+    //     actions: [
+    //       {
+    //         visibility:[0,0.1],
+    //         type: 'stop',
+    //         frames: [0]
+    //       },
+    //       {
+    //         visibility:[0.1,1],
+    //         type: 'seek',
+    //         frames: [0],
+    //       }
+    //     ],
+    //   });
+    //   create({
+    //     mode: 'scroll',
+    //     player: '#caseStudy6',
+    //     actions: [
+    //       {
+    //         visibility:[0,0.1],
+    //         type: 'stop',
+    //         frames: [0]
+    //       },
+    //       {
+    //         visibility:[0.1,1],
+    //         type: 'seek',
+    //         frames: [0],
+    //       }
+    //     ],
+    //   });
+    //   create({
+    //     mode: 'scroll',
+    //     player: '#caseStudy7',
+    //     actions: [
+    //       {
+    //         visibility:[0,0.1],
+    //         type: 'stop',
+    //         frames: [0]
+    //       },
+    //       {
+    //         visibility:[0.1,1],
+    //         type: 'seek',
+    //         frames: [0],
+    //       }
+    //     ],
+    //   });
+    //   create({
+    //     mode: 'scroll',
+    //     player: '#caseStudy8',
+    //     actions: [
+    //       {
+    //         visibility:[0,0.1],
+    //         type: 'stop',
+    //         frames: [0]
+    //       },
+    //       {
+    //         visibility:[0.1,1],
+    //         type: 'seek',
+    //         frames: [0],
+    //       }
+    //     ],
+    //   });
+    //   create({
+    //     mode: 'scroll',
+    //     player: '#caseStudy9',
+    //     actions: [
+    //       {
+    //         visibility:[0,0.1],
+    //         type: 'stop',
+    //         frames: [0]
+    //       },
+    //       {
+    //         visibility:[0.1,1],
+    //         type: 'seek',
+    //         frames: [0],
+    //       }
+    //     ],
+    //   });
 
-    })
+    // })
 
   }
 
@@ -244,5 +253,9 @@ export class CaseStudyComponent implements OnInit {
   L_CursorOut(){
     this.cursor.nativeElement.classList.remove('active');
     this.cursor.nativeElement.classList.remove('lottie');
+  }
+
+  scroll(){
+    // window.pageYOffset('90')
   }
 }

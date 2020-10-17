@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule }from '@angular/forms';
-import { OurWorkModule } from './pages/our-work/our-work.module'
+import { OurWorkModule } from './pages/our-work/our-work.module';
+import { ServicesModule }from './pages/services/services.module';
 
 
 
@@ -25,7 +26,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { LoudMobLabComponent } from './pages/loud-mob-lab/loud-mob-lab.component';
 import { LmmScrolling } from './plugins/lmm-scrolling';
 import { RailTextComponent } from './plugins/rail-text/rail-text.component';
-import { ServiceDetailComponent } from './pages/service-detail/service-detail.component';
+import { ServiceDetailComponent } from './pages/services/service-detail/service-detail.component';
 import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
 import { LmmButtonComponent } from './plugins/lmm-button/lmm-button.component';
 import { SocialSitesComponent } from './plugins/social-sites/social-sites.component';
@@ -33,6 +34,7 @@ import { MonkeyFooterComponent } from './shared/monkey-footer/monkey-footer.comp
 import { CaseStudyModule }from './pages/case-study/case-study.module';
 import { VideoComponent } from './plugins/video/video.component';
 import { ScrolltideComponent } from './plugins/scrolltide/scrolltide.component';
+import { LottieComponent } from './plugins/lottie/lottie.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,8 @@ import { ScrolltideComponent } from './plugins/scrolltide/scrolltide.component';
     SocialSitesComponent,
     MonkeyFooterComponent,
     VideoComponent,
-    ScrolltideComponent
+    ScrolltideComponent,
+    LottieComponent
   ],
   entryComponents :[LmmDialogComponent],
   imports: [
@@ -68,7 +71,8 @@ import { ScrolltideComponent } from './plugins/scrolltide/scrolltide.component';
     BrowserAnimationsModule,
     MatTabsModule,
     MatDialogModule,
-    OurWorkModule
+    OurWorkModule,
+    ServicesModule
   ],
   providers: [],
   bootstrap: [AppComponent],

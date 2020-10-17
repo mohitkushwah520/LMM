@@ -1,0 +1,42 @@
+[
+  {
+    "id" : 1,
+    "name" : "design",
+    "scrollText" : "MOTION DESIGN    CONTENT CREATION    3D DESIGN/VFX    ILLUSTRATIONS    PRODUCT DESIGN    GRAPHIC DESIGN",
+    "content" : "Creativity injected into visuals is storytelling at its best. Your brand goes beyond the way you look, and that’s why we probe deeper to create designs that articulates your brand’s essence and builds emotional resonance. We combine design thinking, market insights and imagination to create hyper-rich designs that are scroll-stopping, head-turning and awe-inspiring. With a focus on visual storytelling, we make designs with context that speak your audience’s language. We convey your brand message with precision and clarity with the help of meaningful content that helps increase your brand recall value. We create content that’s not only good looking,  but also rich, dynamic and share-worthy at every touchpoint.",
+    "href" : "/ourwork/allwork",
+    "lottie1" : "",
+    "lottie2" : "",
+    "readmore_href" : "/service/design"
+  },
+  {
+    "id" : 1,
+    "name" : "branding",
+    "scrollText" : "LOGO DESIGN    VISUAL IDENTITY    BRAND STRATEGY    MARKET ANALYSIS    PACKAGING    BRAND REIMAGINATION",
+    "content" : "Your brand is how your consumers feel about you, It’s an emotion and experience intertwined. Creating emotions is intricate work, and we accomplish this with a focus on rich/loud storytelling, relevancy and meaning. We go beyond face value, identify your brand DNA and clarify core values to magnify what you stand for to give your brand a recognizable face that is relevant, articulate and stunning!  From strategy to inception, we launch visions backed by powerful designs to build brands that are seen, felt and heard. From reimagination to developing one from scratch, we build fresh and visually-dynamic brands on the backbone of data-driven strategies that stand the test of time and trends",
+    "href" : "/ourwork/allwork",
+    "lottie1" : "",
+    "lottie2" : "",
+    "readmore_href" : "/service/branding"
+  },
+  {
+    "id" : 1,
+    "name" : "marketing",
+    "scrollText" : "MARKET RESEARCH    CONSUMER ANALYSIS    DIGITAL MARKETING    CONTENT STRATEGY    PAID MEDIA MARKETIN",
+    "content" : "We connect, ask questions, identify the unique challenges and align on what needs solving and why. We make sense of every new touchpoint and reach the right people, at the right time with the right message by optimizing your brand communication. We combine cutting-edge technologies with emotions and groundbreaking concepts to create experiences which resonate deeply. We integrate storytelling and meaning at every stage of marketing to build strategies that are highly-tailored to your brand, one that’s consistent and relevant. We engage in real-time,  to create remarkable experiences that do not only convert and grow your business, but are also memorable. We craft intelligent and dynamic ways to engage key audiences worldwide.",
+    "href" : "/ourwork/allwork",
+    "lottie1" : "",
+    "lottie2" : "",
+    "readmore_href" : "/service/marketing"
+  },
+  {
+    "id" : 1,
+    "name" : "apps and websites",
+    "scrollText" : "MARKET RESEARCH    INDUSTRY ANALYSIS    DEMOGRAPHIC STUDY    ONLINE STRATEGIES",
+    "content" : "Creativity injected into visuals is storytelling at its best. Your brand goes beyond the way you look, and that’s why we probe deeper to create designs that articulates your brand’s essence and builds emotional resonance. We combine design thinking, market insights and imagination to create hyper-rich designs that are scroll-stopping, head-turning and awe-inspiring. With a focus on visual storytelling, we make designs with context that speak your audience’s language. We convey your brand message with precision and clarity with the help of meaningful ",
+    "href" : "/ourwork/allwork",
+    "lottie1" : "",
+    "lottie2" : "",
+    "readmore_href" : "/service/apps_Websites"
+  }
+]

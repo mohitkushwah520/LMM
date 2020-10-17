@@ -11,7 +11,7 @@ import { ContactService }from '../../services/contact.service';
 })
 export class ContactComponent implements OnInit {
 
-  public servicsContent = [{id:1,name:'design'},{id:2,name :'branding'},{id:3 , name:'marketing'},{id : 4 , name : 'app'},{id : 5 ,name : 'website'}]
+  public servicsContent = [{id:1,name:'design'},{id:2,name :'branding'},{id:3 , name:'marketing'},{id : 4 , name : 'apps'},{id : 5 ,name : 'website'}]
   public products = [{id:1,name:'loud AR'},{id:2,name :'loud CAM'}]
   public hire = [{id:1,name:'hire me'}]
 

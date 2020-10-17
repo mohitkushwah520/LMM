@@ -1,0 +1,57 @@
+<section class="srviceDetail">
+  <div class="hero_banner">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 d-flex align-items-center">
+                <div class="content_box w-100">
+                    <h1 class="lmm_h1">{{bannerData.heading}}</h1>
+                    <p class="text-justify">{{bannerData.description}}</p>
+                    <a [routerLink]="bannerData.href" class="lmm_arrow_btn mt-3">view work</a>
+                </div>
+            </div>
+            <div class="col-md-6 ml-auto">
+              <div class="banner_lottie h-100 d-flex justify-content-center align-items-center">
+                <!-- <app-lottie [lottie_src]="bannerData.bannerLottie" [imgVisible]="false" [id]="bannerData.id"></app-lottie> -->
+                <lottie-player class="lottie_player lottie_design" *ngIf="bannerData.title === 'design'" id="design" [src]="bannerData.bannerLottie" autoplay  loop></lottie-player>
+                <lottie-player class="lottie_player lottie_design" *ngIf="bannerData.title === 'branding'" id="branding" [src]="bannerData.bannerLottie" autoplay  loop></lottie-player>
+                <lottie-player class="lottie_player lottie_design" *ngIf="bannerData.title === 'marketing'" id="marketing" [src]="bannerData.bannerLottie" autoplay  loop></lottie-player>
+                <lottie-player class="lottie_player lottie_design" *ngIf="bannerData.title === 'apps_websites'"id="apps_Websites" [src]="bannerData.bannerLottie" autoplay  loop></lottie-player>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="serviceDetail_wrap_1 mt-n5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-10 m-auto">
+          <div class="row">
+            <div class="col-md-6 my-5 py-5" *ngFor="let item of pageContentData.pageContent">
+              <div class="content_box px-5 mx-5 m-auto">
+                <h1 class="lmm_h5">{{item.heading}}</h1>
+                <p class="text-justify my-5">{{item.description}}</p>
+                <!-- <a href="" class="lmm_arrow_btn mt-3">view work</a> -->
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="footer_monkey">
+    <div class="container-fluid">
+      <div class="landing_footer">
+        <div class="row position-relative">
+          <div class="footer_des w-50 m-auto">
+            <p class="text-white text-left">Have a project in mins ?</p>
+            <span class="lmm_h1 text-white my-5 d-block">Let's have some fun together !</span>
+            <a href="" class="d-block mt-5"><app-lmm-button ButtonText="reach out"></app-lmm-button></a>
+          </div>
+          <div class="footer_video ml-auto">
+            <video src="../../../assets/media/video/footer_jumpingvideo.mp4" muted autoplay loop></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</section>

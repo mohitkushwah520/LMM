@@ -113,6 +113,7 @@ p{
   font: 25rem vHeavy,sans-serif !important;
   color: transparent;
   -webkit-text-stroke: 2px #494949;
+  /* pointer-events: none; */
 }
 .lmm_h5_stroke{
   font: 5rem vHeavy,sans-serif !important;
@@ -401,6 +402,7 @@ button.video_btn.mute::after{
   border-radius: 10px 10px 17px 18px;
   overflow: hidden;
   margin: 5rem 0;
+  height: 600px;
 }
 .our_recent_card p{
   position: absolute;
@@ -662,13 +664,42 @@ button.video_btn.mute::after{
   }
 } /*max-width : 1600px*/
 /* ========services page======== */
-
+/* .services_banner{
+  position: relative;
+} */
+.services_banner video{
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+.services_banner .content_box{
+  transform: translate(25% , 35%);
+}
+.services_banner a.lmm_arrow_btn{
+  transform: translate(35% , 100%);
+}
+.services_banner a.lmm_arrow_btn::after{
+  left: -85%;
+}
 .service_hero .box{
-  width: 80%;
-  height: 450px;
+  width: 85%;
+  height: 400px;
   background: #222;
   vertical-align: bottom;
   border-radius: 10px;
+  transform: translateY(30%);
+}
+.service_hero .lmm_h5{
+  font-size: 7rem !important;
+}
+.service_hero .lmm_h5_stroke{
+  font-size: 4rem !important;
+}
+.service_hero .service_btn{
+  margin: 11rem 4.5rem auto auto;
 }
 .service_hero .services_box{
   position: relative;
@@ -676,7 +707,7 @@ button.video_btn.mute::after{
 }
 .services_box .lmm_marquee_plugin{
   position: absolute;
-  top: 25%;
+  top: 20%;
   left: 0%;
   width: 100%;
 }
@@ -687,6 +718,16 @@ button.video_btn.mute::after{
   background: #00e6d7 !important;
 }
 /* =========services Detail======== */
+.srviceDetail .lottie_player{
+  width: 80%;
+  margin: auto;
+}
+.srviceDetail .hero_banner .content_box{
+  transform: translate(25% , 0%);
+}
+.srviceDetail .hero_banner a.lmm_arrow_btn{
+  transform: translateX(70%);
+}
 #apps_Websites{
   width: 100%;
   height: 75vh;
@@ -948,13 +989,13 @@ section.about p{
   position: relative;
   color: #fff;
   font: 12rem VHeavy ,sans-serif !important;
-  margin-bottom: 10rem;
+  /* margin-bottom: 10rem; */
+  overflow: hidden;
 }
 .caseStudy_banner::after{
   content: 'case studies';
   position: absolute;
   width: 100%;
-  /* height: 100%; */
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -965,9 +1006,22 @@ section.about p{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
   width: 100%;
-  min-height: 100%;
+  transform: translate(-50% , -50%);
+  z-index: -1;
+}
+.caseStudy_banner .scroll{
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  text-align: center;
+  cursor: pointer;
+}
+.caseStudy_banner .scroll .lottie{
+  width: 120px;
+  height: 150px;
 }
 .lottie_box{
   margin: 5rem 0;
@@ -975,7 +1029,7 @@ section.about p{
   border-radius: 10px 10px 15px 15px;
   overflow: hidden;
   width: 100%;
-  height: auto;
+  height: 600px;
   cursor: pointer;
 }
 .lottie_box h1{
@@ -1263,7 +1317,7 @@ section.about p{
   float: right;
 	padding: 0 1em;
 	width: 40%;
-	color: #00e6d7;
+	color: #232323;
 	font-weight: bold;
 	font-size: 70.25%;
 	-webkit-font-smoothing: antialiased;
@@ -1308,7 +1362,7 @@ section.about p{
   width: 100%;
   height: 5rem;
 	background: transparent;
-	color: #00e6d7;
+	color: #232323;
 	font-size: 1.25em;
 }
 
@@ -1332,7 +1386,7 @@ section.about p{
 
 .graphic--nao {
   /* stroke: #92989e; */
-  stroke: #00e6d7;
+  stroke: #232323;
 	pointer-events: none;
 	-webkit-transition: -webkit-transform 0.7s, stroke 0.7s;
 	transition: transform 0.7s, stroke 0.7s;
@@ -1343,7 +1397,7 @@ section.about p{
 .input__field--nao:focus + .input__label--nao,
 .input--filled .input__label--nao {
   /* color: #333; */
-  color: #00e6d7;
+  color: #232323;
 	-webkit-transform: translate3d(0, -1.25em, 0) scale3d(0.75, 0.75, 1);
 	transform: translate3d(0, -1.25em, 0) scale3d(0.75, 0.75, 1);
 }
@@ -1351,7 +1405,7 @@ section.about p{
 .input__field--nao:focus ~ .graphic--nao,
 .input--filled .graphic--nao {
   /* stroke: #333; */
-  stroke: #00e6d7;
+  stroke: #232323;
 	-webkit-transform: translate3d(-66.6%, 0, 0);
 	transform: translate3d(-66.6%, 0, 0);
 }
@@ -1361,15 +1415,15 @@ section.about p{
 }
 .text_area label{
   font: 2.5rem Vbold,sans-serif;
-  color: #00e6d7;
+  color: #232323;
   text-align: left;
 }
 .text_area textarea{
-  border : 2px solid #00e6d7;
+  border : 2px solid #232323;
   padding: 1rem;
     width: 100%;
     background: transparent;
-    color: #00e6d7;
+    color: #232323;
     font-size: 1.25em;
 }
 .text_area textarea:focus{
@@ -1387,6 +1441,7 @@ section.about p{
 .lmm_rail_plugin .lmm_h5_stroke{
   display: inline;
   padding: 0 2rem;
+  white-space: pre;
 }
 .lmm_rail_content{
   display: flex;
@@ -1482,7 +1537,23 @@ section.about p{
 .scrolltideText{
   width: 100%;
 }
-
+.lmm_lottie{
+  position: relative;
+}
+.lmm_lottie .lottie_thumbnail{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* z-index: -2; */
+}
+.lmm_lottie .lmm_lottie_player{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* z-index: 2; */
+  /* display: none; */
+}
 
 /* =====bootstrap changes======== */
 /* ==for tabs our work====== */

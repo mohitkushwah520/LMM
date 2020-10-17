@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit  {
       this.service.home_ourRecent().subscribe(
         data => {
           this.our_recent = data;
-          window.setTimeout(this.lot,1000);
+          // window.setTimeout(this.lot,1000);
           this.gsapAnimationOnLoad();
         },
         err => {console.log(err)}
@@ -52,125 +52,125 @@ export class HomeComponent implements OnInit  {
     // this.gsapAnimationOnLoad();
     // this.gsapScrollTrigger();
     this.video();
-    window.addEventListener('load',this.lot);
+    // window.addEventListener('load',this.lot);
     this.cursorAnimation();
     this.Cursor_lmm_arrow_link();
    }//afterVierInit
 
-  lot(){
-    create({
-      mode: 'scroll',
-      player: '#lottieOne',
-      actions: [
-        {
-          visibility:[0,0.1],
-          type: 'stop',
-          frames: [0]
-        },
-        {
-          visibility:[0.1,1],
-          type: 'seek',
-          frames: [0],
-        }
-      ],
-    });
-    create({
-      mode: 'scroll',
-      player: '#lottieTwo',
-      actions: [
-        {
-          visibility:[0,0.1],
-          type: 'stop',
-          frames: [0]
-        },
-        {
-          visibility:[0.1,1],
-          type: 'seek',
-          frames: [0],
-        }
-      ],
-    });
-    create({
-      mode: 'scroll',
-      player: '#lottieThree',
-      actions: [
-        {
-          visibility:[0,0.1],
-          type: 'stop',
-          frames: [0]
-        },
-        {
-          visibility:[0.1,1],
-          type: 'seek',
-          frames: [0],
-        }
-      ],
-    });
-    create({
-      mode: 'scroll',
-      player: '#LottieDesign',
-      actions: [
-        {
-          visibility:[0,0.1],
-          type: 'stop',
-          frames: [0]
-        },
-        {
-          visibility:[0.1,1],
-          type: 'seek',
-          frames: [0],
-        }
-      ],
-    });
-    create({
-      mode: 'scroll',
-      player: '#LottieBrand',
-      actions: [
-        {
-          visibility:[0,0.1],
-          type: 'stop',
-          frames: [0]
-        },
-        {
-          visibility:[0.1,1],
-          type: 'seek',
-          frames: [0],
-        }
-      ],
-    });
-    create({
-      mode: 'scroll',
-      player: '#LottieMarketing',
-      actions: [
-        {
-          visibility:[0,0.1],
-          type: 'stop',
-          frames: [0]
-        },
-        {
-          visibility:[0.1,1],
-          type: 'seek',
-          frames: [0],
-        }
-      ],
-    });
-    create({
-      mode: 'scroll',
-      player: '#LottieWeb',
-      actions: [
-        {
-          visibility:[0,0.1],
-          type: 'stop',
-          frames: [0]
-        },
-        {
-          visibility:[0.1,1],
-          type: 'seek',
-          frames: [0],
-        }
-      ],
-    });
-  }
+  // lot(){
+    // create({
+    //   mode: 'scroll',
+    //   player: '#lottieOne',
+    //   actions: [
+    //     {
+    //       visibility:[0,0.1],
+    //       type: 'stop',
+    //       frames: [0]
+    //     },
+    //     {
+    //       visibility:[0.1,1],
+    //       type: 'seek',
+    //       frames: [0],
+    //     }
+    //   ],
+    // });
+    // create({
+    //   mode: 'scroll',
+    //   player: '#lottieTwo',
+    //   actions: [
+    //     {
+    //       visibility:[0,0.1],
+    //       type: 'stop',
+    //       frames: [0]
+    //     },
+    //     {
+    //       visibility:[0.1,1],
+    //       type: 'seek',
+    //       frames: [0],
+    //     }
+    //   ],
+    // });
+    // create({
+    //   mode: 'scroll',
+    //   player: '#lottieThree',
+    //   actions: [
+    //     {
+    //       visibility:[0,0.1],
+    //       type: 'stop',
+    //       frames: [0]
+    //     },
+    //     {
+    //       visibility:[0.1,1],
+    //       type: 'seek',
+    //       frames: [0],
+    //     }
+    //   ],
+    // });
+  //   create({
+  //     mode: 'scroll',
+  //     player: '#LottieDesign',
+  //     actions: [
+  //       {
+  //         visibility:[0,0.1],
+  //         type: 'stop',
+  //         frames: [0]
+  //       },
+  //       {
+  //         visibility:[0.1,1],
+  //         type: 'seek',
+  //         frames: [0],
+  //       }
+  //     ],
+  //   });
+  //   create({
+  //     mode: 'scroll',
+  //     player: '#LottieBrand',
+  //     actions: [
+  //       {
+  //         visibility:[0,0.1],
+  //         type: 'stop',
+  //         frames: [0]
+  //       },
+  //       {
+  //         visibility:[0.1,1],
+  //         type: 'seek',
+  //         frames: [0],
+  //       }
+  //     ],
+  //   });
+  //   create({
+  //     mode: 'scroll',
+  //     player: '#LottieMarketing',
+  //     actions: [
+  //       {
+  //         visibility:[0,0.1],
+  //         type: 'stop',
+  //         frames: [0]
+  //       },
+  //       {
+  //         visibility:[0.1,1],
+  //         type: 'seek',
+  //         frames: [0],
+  //       }
+  //     ],
+  //   });
+  //   create({
+  //     mode: 'scroll',
+  //     player: '#LottieWeb',
+  //     actions: [
+  //       {
+  //         visibility:[0,0.1],
+  //         type: 'stop',
+  //         frames: [0]
+  //       },
+  //       {
+  //         visibility:[0.1,1],
+  //         type: 'seek',
+  //         frames: [0],
+  //       }
+  //     ],
+  //   });
+  // }
   video(){
     this.herovideo.nativeElement.load();
     this.herovideo.nativeElement.play = true;

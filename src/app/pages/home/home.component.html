@@ -52,9 +52,7 @@
       <div class="col-md-9 m-auto">
         <div class="our_recent_card" *ngFor="let item of our_recent">
           <p class="w-50">{{item.description}}</p>
-          <lottie-player [src]="item.lottieURL" [id]="item.id" speed="10" loop (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()"></lottie-player>
-          <!-- <app-video [src]='item.src'></app-video> -->
-          <!-- <img src="../../../assets/media/video/services/cocoalite.mp4" alt=""> -->
+          <app-lottie [img_src]="item.img_src" [lottie_src]="item.lottie_src" [imgVisible]="true" [id]="item.id" (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()"></app-lottie>
         </div>
       </div>
       <div class="col-md-9 m-auto">
@@ -88,7 +86,8 @@
           </div>
           <div class="col-md-6 position-relative">
             <div class="lottie">
-              <lottie-player class="lottie_player lottie_design" [id]="item.id" [src]="item.lottieUrl" loop></lottie-player>
+              <!-- <lottie-player class="lottie_player lottie_design" [id]="item.id" [src]="item.lottieUrl" loop></lottie-player> -->
+              <app-lottie [lottie_src]="item.lottie_src" [imgVisible]="false" [id]="item.id"></app-lottie>
             </div>
           </div>
           <a class="lmm_arrow_btn ml-5 mt-4" routerLink='service/{{item.title}}'>view more</a>
