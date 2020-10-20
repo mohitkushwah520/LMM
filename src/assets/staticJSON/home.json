@@ -1,9 +1,9 @@
 [
   {
     "ourRecent" : [
-      {"id" : "lottieOne" , "description" : "Hic nisi a mollitia. Necessitatibus earum laboriosam repudiandae ex debitis voluptatibus magni ?" , "lottie_src":"assets/media/lottie_files/caseStudy/lotti_eyehop.json" , "img_src" : "assets/media/images/caseStudy/lottie_eyehop_cover.png"},
-      {"id" : "lottieTwo" , "description" : "Hic nisi a mollitia. Necessitatibus earum laboriosam repudiandae ex debitis voluptatibus magni ?" , "lottie_src":"assets/media/lottie_files/caseStudy/lotti_persona.json" , "img_src" : "assets/media/images/caseStudy/lottie_persona_cover.png"},
-      {"id" : "lottieThree" , "description" : "Hic nisi a mollitia. Necessitatibus earum laboriosam repudiandae ex debitis voluptatibus magni ?" , "lottie_src":"assets/media/lottie_files/caseStudy/lottie_cocoalite.json" , "img_src" : "assets/media/images/caseStudy/lottie_cocoalite_cover.png"}
+      {"id" : "lottieOne" ,"href":"/caseStudy/eyehop", "description" : "Hic nisi a mollitia. Necessitatibus earum laboriosam repudiandae ex debitis voluptatibus magni ?" , "lottie_src":"assets/media/lottie_files/caseStudy/lotti_eyehop.json" , "img_src" : "assets/media/images/caseStudy/lottie_eyehop_cover.png"},
+      {"id" : "lottieTwo" ,"href":"/caseStudy/persona", "description" : "Hic nisi a mollitia. Necessitatibus earum laboriosam repudiandae ex debitis voluptatibus magni ?" , "lottie_src":"assets/media/lottie_files/caseStudy/lotti_persona.json" , "img_src" : "assets/media/images/caseStudy/lottie_persona_cover.png"},
+      {"id" : "lottieThree" ,"href":"/caseStudy/cocoalite", "description" : "Hic nisi a mollitia. Necessitatibus earum laboriosam repudiandae ex debitis voluptatibus magni ?" , "lottie_src":"assets/media/lottie_files/caseStudy/lottie_cocoalite.json" , "img_src" : "assets/media/images/caseStudy/lottie_cocoalite_cover.png"}
     ]
   },
   {

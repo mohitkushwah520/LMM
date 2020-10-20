@@ -27,7 +27,7 @@ export class MonkeyFooterComponent implements OnInit {
 
       var dis = this.monkeyVideo.nativeElement.getBoundingClientRect().top;
       if(dis <= 100){
-        var header = true;
+        var header = false;
         this.service.sendMsg(header);
       }else{
         var header = false;

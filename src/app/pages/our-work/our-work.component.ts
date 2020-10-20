@@ -12,7 +12,7 @@ import { MatTabGroup } from '@angular/material/tabs';
 export class OurWorkComponent implements OnInit {
 
   @ViewChildren('video')video : QueryList<HTMLVideoElement> ;
-  @ViewChild('cursor')cursor : ElementRef;
+  // @ViewChild('cursor')cursor : ElementRef;
   @ViewChild('matTabGroup')matTabGroup : MatTabGroup;
   @ViewChild('mainVideo')mainVideo : ElementRef;
   @ViewChild('render')render : ElementRef;
@@ -28,38 +28,38 @@ export class OurWorkComponent implements OnInit {
     })
   }
   ngAfterViewInit(): void{
-   this.cursorAnimation();
-   this.Cursor_lmm_arrow_link();
+  //  this.cursorAnimation();
+  //  this.Cursor_lmm_arrow_link();
   }
 
-  cursorAnimation(){
-    this.cursor.nativeElement.style.pointerEvents = 'none';
-    document.body.addEventListener('mousemove',(e)=>{
-      this.cursor.nativeElement.style.top = e.clientY+'px';
-      this.cursor.nativeElement.style.left = e.clientX+'px';
-    })//cursor
-  }
-  Cursor_lmm_arrow_link(){
-    window.setTimeout(()=>{
-      var all = document.querySelectorAll('.lmm_arrow_btn');
-      all.forEach((el)=>{
-        el.addEventListener('mouseover',()=>{
-          this.cursor.nativeElement.children[0].classList.add('active');
-        })//hover
-        el.addEventListener('mouseout',()=>{
-          this.cursor.nativeElement.children[0].classList.remove('active');
-        })
-      })//forEach
-    },1000)//timeout
-  }
-  M_CursorIn(){
-    this.cursor.nativeElement.classList.add('stopVideo');
-    this.cursor.nativeElement.classList.add('active');
-  }
-  M_CursorOut(){
-    this.cursor.nativeElement.classList.remove('stopVideo');
-    this.cursor.nativeElement.classList.remove('active');
-  }
+  // cursorAnimation(){
+  //   this.cursor.nativeElement.style.pointerEvents = 'none';
+  //   document.body.addEventListener('mousemove',(e)=>{
+  //     this.cursor.nativeElement.style.top = e.clientY+'px';
+  //     this.cursor.nativeElement.style.left = e.clientX+'px';
+  //   })//cursor
+  // }
+  // Cursor_lmm_arrow_link(){
+  //   window.setTimeout(()=>{
+  //     var all = document.querySelectorAll('.lmm_arrow_btn');
+  //     all.forEach((el)=>{
+  //       el.addEventListener('mouseover',()=>{
+  //         this.cursor.nativeElement.children[0].classList.add('active');
+  //       })//hover
+  //       el.addEventListener('mouseout',()=>{
+  //         this.cursor.nativeElement.children[0].classList.remove('active');
+  //       })
+  //     })//forEach
+  //   },1000)//timeout
+  // }
+  // M_CursorIn(){
+  //   this.cursor.nativeElement.classList.add('stopVideo');
+  //   this.cursor.nativeElement.classList.add('active');
+  // }
+  // M_CursorOut(){
+  //   this.cursor.nativeElement.classList.remove('stopVideo');
+  //   this.cursor.nativeElement.classList.remove('active');
+  // }
   videoOpen(){
     document.getElementById('mainVideo').style.display = 'block';
     this.mainVideo.nativeElement.play();

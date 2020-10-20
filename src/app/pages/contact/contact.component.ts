@@ -23,6 +23,7 @@ export class ContactComponent implements OnInit {
   constructor(private fb : FormBuilder ,private _contactService : ContactService) { }
 
   ngOnInit(): void {
+    window.scroll(0,0);
     setTimeout(() => {
       this.lmmAnimation(window)
     }, 1000);

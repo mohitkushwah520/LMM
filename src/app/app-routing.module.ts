@@ -10,13 +10,13 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoudMobLabComponent } from './pages/loud-mob-lab/loud-mob-lab.component';
 import { OurProcessComponent } from './pages/our-process/our-process.component';
 import { OurWorkComponent } from './pages/our-work/our-work.component';
-import { ServiceDetailComponent } from './pages/services/service-detail/service-detail.component';
-import { ServicesComponent } from './pages/services/services.component';
-import { LmmButtonComponent } from './plugins/lmm-button/lmm-button.component';
-import { LottieComponent } from './plugins/lottie/lottie.component';
-import { RailTextComponent } from './plugins/rail-text/rail-text.component';
-import { ScrolltideComponent } from './plugins/scrolltide/scrolltide.component';
-import { VideoComponent } from './plugins/video/video.component';
+// import { ServiceDetailComponent } from './pages/services/service-detail/service-detail.component';
+// import { ServicesComponent } from './pages/services/services.component';
+// import { LmmButtonComponent } from './plugins/lmm-button/lmm-button.component';
+// import { LottieComponent } from './plugins/lottie/lottie.component';
+// import { RailTextComponent } from './plugins/rail-text/rail-text.component';
+// import { ScrolltideComponent } from './plugins/scrolltide/scrolltide.component';
+// import { VideoComponent } from './plugins/video/video.component';
 // import { }from ''
 
 
@@ -25,14 +25,14 @@ const routes: Routes = [
     path : '',
     component : HomeComponent
   },
-  {
-    path : 'plugins',
-    component : LottieComponent
-  },
-  {
-    path : 'services',
-    component : ServicesComponent
-  },
+  // {
+  //   path : 'plugins',
+  //   component : LottieComponent
+  // },
+  // {
+  //   path : 'services',
+  //   component : ServicesComponent
+  // },
 
   {
     path : 'blogs',
@@ -54,10 +54,10 @@ const routes: Routes = [
     path : 'loudMobLab',
     component : LoudMobLabComponent
   },
-  {
-    path : 'service/:slug',
-    component : ServiceDetailComponent
-  },
+  // {
+  //   path : 'service/:slug',
+  //   component : ServiceDetailComponent
+  // },
   {
     path : 'blog/:id',
     component : BlogDetailComponent

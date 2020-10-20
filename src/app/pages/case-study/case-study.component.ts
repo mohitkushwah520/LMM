@@ -2,6 +2,7 @@ import { viewClassName } from '@angular/compiler';
 import { Component, ElementRef, OnInit, ViewChild  } from '@angular/core';
 // import { create } from '@lottiefiles/lottie-interactivity';
 import { OurworkService }from '../../services/ourwork.service';
+import * as $ from 'jquery' ;
 
 @Component({
   selector: 'app-case-study',
@@ -12,7 +13,7 @@ export class CaseStudyComponent implements OnInit {
 
 
   @ViewChild('bannerVideo')bannerVideo : ElementRef;
-  @ViewChild('cursor')cursor : ElementRef;
+  // @ViewChild('cursor')cursor : ElementRef;
   public caseStudy = [
     {
       id : 'caseStudy1',
@@ -83,179 +84,15 @@ export class CaseStudyComponent implements OnInit {
 
   constructor(private serv : OurworkService) { }
   ngOnInit(): void {
-    // this.serv.ourprocess().subscribe((data)=>{
-    //   // this.footerVideo.nativeElement.play();
-    //   create({
-    //     mode: 'scroll',
-    //     player: '#caseStudy1',
-    //     actions: [
-    //       {
-    //         visibility:[0,0.1],
-    //         type: 'stop',
-    //         frames: [0]
-    //       },
-    //       {
-    //         visibility:[0.1,1],
-    //         type: 'seek',
-    //         frames: [0],
-    //       }
-    //     ],
-    //   });
-    //   create({
-    //     mode: 'scroll',
-    //     player: '#caseStudy2',
-    //     actions: [
-    //       {
-    //         visibility:[0,0.1],
-    //         type: 'stop',
-    //         frames: [0]
-    //       },
-    //       {
-    //         visibility:[0.1,1],
-    //         type: 'seek',
-    //         frames: [0],
-    //       }
-    //     ],
-    //   });
-    //   create({
-    //     mode: 'scroll',
-    //     player: '#caseStudy3',
-    //     actions: [
-    //       {
-    //         visibility:[0,0.1],
-    //         type: 'stop',
-    //         frames: [0]
-    //       },
-    //       {
-    //         visibility:[0.1,1],
-    //         type: 'seek',
-    //         frames: [0],
-    //       }
-    //     ],
-    //   });
-    //   create({
-    //     mode: 'scroll',
-    //     player: '#caseStudy4',
-    //     actions: [
-    //       {
-    //         visibility:[0,0.1],
-    //         type: 'stop',
-    //         frames: [0]
-    //       },
-    //       {
-    //         visibility:[0.1,1],
-    //         type: 'seek',
-    //         frames: [0],
-    //       }
-    //     ],
-    //   });
-    //   create({
-    //     mode: 'scroll',
-    //     player: '#caseStudy5',
-    //     actions: [
-    //       {
-    //         visibility:[0,0.1],
-    //         type: 'stop',
-    //         frames: [0]
-    //       },
-    //       {
-    //         visibility:[0.1,1],
-    //         type: 'seek',
-    //         frames: [0],
-    //       }
-    //     ],
-    //   });
-    //   create({
-    //     mode: 'scroll',
-    //     player: '#caseStudy6',
-    //     actions: [
-    //       {
-    //         visibility:[0,0.1],
-    //         type: 'stop',
-    //         frames: [0]
-    //       },
-    //       {
-    //         visibility:[0.1,1],
-    //         type: 'seek',
-    //         frames: [0],
-    //       }
-    //     ],
-    //   });
-    //   create({
-    //     mode: 'scroll',
-    //     player: '#caseStudy7',
-    //     actions: [
-    //       {
-    //         visibility:[0,0.1],
-    //         type: 'stop',
-    //         frames: [0]
-    //       },
-    //       {
-    //         visibility:[0.1,1],
-    //         type: 'seek',
-    //         frames: [0],
-    //       }
-    //     ],
-    //   });
-    //   create({
-    //     mode: 'scroll',
-    //     player: '#caseStudy8',
-    //     actions: [
-    //       {
-    //         visibility:[0,0.1],
-    //         type: 'stop',
-    //         frames: [0]
-    //       },
-    //       {
-    //         visibility:[0.1,1],
-    //         type: 'seek',
-    //         frames: [0],
-    //       }
-    //     ],
-    //   });
-    //   create({
-    //     mode: 'scroll',
-    //     player: '#caseStudy9',
-    //     actions: [
-    //       {
-    //         visibility:[0,0.1],
-    //         type: 'stop',
-    //         frames: [0]
-    //       },
-    //       {
-    //         visibility:[0.1,1],
-    //         type: 'seek',
-    //         frames: [0],
-    //       }
-    //     ],
-    //   });
-
-    // })
-
   }
 
   ngAfterViewInit(): void{
     this.bannerVideo.nativeElement.muted = true;
     this.bannerVideo.nativeElement.play = true;
-    this.cursorAnimation();
-  }
-  cursorAnimation(){
-    this.cursor.nativeElement.style.pointerEvents = 'none';
-    document.body.addEventListener('mousemove',(e)=>{
-      this.cursor.nativeElement.style.top = e.clientY+'px';
-      this.cursor.nativeElement.style.left = e.clientX+'px';
-    })
-  }
-  L_CursorIn(){
-    this.cursor.nativeElement.classList.add('active');
-    this.cursor.nativeElement.classList.add('lottie');
-  }
-  L_CursorOut(){
-    this.cursor.nativeElement.classList.remove('active');
-    this.cursor.nativeElement.classList.remove('lottie');
   }
 
   scroll(){
-    // window.pageYOffset('90')
+    var viewHeight = window.innerHeight;
+    $("body,html").stop().animate({"scrollTop": viewHeight+'px'},1500)
   }
 }

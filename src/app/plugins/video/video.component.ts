@@ -1,5 +1,7 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { windowWhen } from 'rxjs/operators';
 import { AllServicesService }from '../../services/all-services.service';
+import * as $ from 'jquery' ;
 
 @Component({
   selector: 'app-video',
@@ -8,94 +10,107 @@ import { AllServicesService }from '../../services/all-services.service';
 })
 export class VideoComponent implements OnInit {
 
-  @Input()src : string;
-
-  @ViewChild('video')video : ElementRef<HTMLVideoElement>;
-  constructor(private service : AllServicesService) { }
-
-  public red = 'primary';
-
-  public data : any ;
+  constructor(private render : Renderer2) { }
 
   ngOnInit(): void {
+    var mouse = document.getElementById('mouse');
+    var span = document.querySelector('.mouse span')
+    this.render.removeClass(mouse , 'active');
+      this.render.removeClass(span , 'active');
+    window.addEventListener('mousemove',(e)=>{
 
-    this.service.home_client().subscribe(data=>{
-      // console.log(data)
-      this.data = data;
-    })
-
-  }
-
-
-
-
-  ngAfterViewInit(): void{
-    var time = 0.15;
-    let scrollPosition = window.scrollY;
-    // console.log(scrollPosition)
-   window.addEventListener('scroll',()=>{
-    var video = this.video.nativeElement;
-    var top = video.getBoundingClientRect().top
-    var duration = video.duration;
-    var deviceHeight = window.innerHeight;
-    var deviceWidth = window.innerWidth;
-    let scrolling = window.scrollY;
+      var smallVideo =  document.querySelector('.short_video video');
+      var mainvideo = document.querySelector('.main_video video');
+      var linkArrow = document.querySelectorAll('.lmm_arrow_btn');
+      var arrow_cursor = document.querySelectorAll('.arrow_cursor');
+      var circlemouse = document.querySelectorAll('.circle_hover');
 
 
-    if((-(top - (deviceHeight*0.95)) >=0 ) && ((top) >= (-video.clientHeight*0.40))){
-      if(scrollPosition <= scrolling){
-        var duration = (time += 0.025);
-        video.currentTime = duration;
-        return scrollPosition = window.scrollY , time;
+      var x = e.clientX;
+      var y = e.clientY;
+
+      this.render.setStyle(mouse , 'left',x+'px');
+      this.render.setStyle(mouse , 'top',y+'px');
+
+      if(smallVideo == null){
       }else{
-        var duration = (time -= 0.025);
-        video.currentTime = duration;
-        return scrollPosition = window.scrollY , time;
+        smallVideo.addEventListener('mouseover',()=>{
+              this.render.addClass(mouse , 'active');
+              this.render.addClass(mouse , 'shortVideo');
+            })
+            smallVideo.addEventListener('mouseout',()=>{
+              this.render.removeClass(mouse , 'active');
+              this.render.removeClass(mouse , 'shortVideo');
+            })
       }
-    }
 
-    // if(scrollPosition <= scrolling){
+      if(mainvideo == null){
+      }else{
+          mainvideo.addEventListener('mouseover',()=>{
+            this.render.addClass(mouse , 'active');
+            this.render.addClass(mouse , 'mainvideo');
+          })
+          mainvideo.addEventListener('mouseout',()=>{
+            this.render.removeClass(mouse , 'active');
+            this.render.removeClass(mouse , 'mainvideo');
+          })
+      }
 
-    //   if((-(top - (deviceHeight*0.95)) >=0 ) && ((top) >= (-video.clientHeight*0.40))){
-    //     var duration = (time += 0.025);
-    //    video.currentTime = duration;
-    //    console.log(duration+'hiii')
-    //    return time
+      if(linkArrow === null){
+      }else{
+        linkArrow.forEach((el)=>{
+            el.addEventListener('mouseover',()=>{
+              this.render.addClass(span , 'active')
+            })
+            el.addEventListener('mouseout',()=>{
+              this.render.removeClass(span , 'active')
+            })
+            el.addEventListener('click',()=>{
+              this.render.removeClass(span , 'active')
+            })
+          })
+      }
 
-    //   }
-    //   // console.log('hii')
-    //   return scrollPosition = window.scrollY;
+      if(arrow_cursor == null){
+      }else{
+        arrow_cursor.forEach((el)=>{
+          el.addEventListener('mouseover',()=>{
+            // $('#mouse').stop().animate({'width':'100px','height':'100px'},400)
+            this.render.addClass(mouse,'active');
+            this.render.addClass(mouse,'arrow_cursor');
+          })
+          el.addEventListener('mouseout',()=>{
+            // $('#mouse').stop().animate({'width':'30px','height':'30px'},400)
+            this.render.removeClass(mouse,'active');
+            this.render.removeClass(mouse,'arrow_cursor');
+          })
+          el.addEventListener('click',()=>{
+            this.render.removeClass(mouse,'active');
+            this.render.removeClass(mouse,'arrow_cursor');
+          })
+        })
+      }
 
-    // }else{
-    //   if((-(top - (deviceHeight*0.95)) >=0 ) && ((top) >= (-video.clientHeight*0.40))){
-    //     var duration = (time -= 0.025);
-    //    video.currentTime = duration;
-    //   //  console.log(duration+'bye')
-    //    return time;
+      if(circlemouse == null){
+      }else{
+        circlemouse.forEach((el)=>{
+          el.addEventListener('mouseover',()=>{
+            this.render.addClass(span , 'active')
+          })
+          el.addEventListener('mouseout',()=>{
+            this.render.removeClass(span , 'active')
+          })
+          el.addEventListener('click',()=>{
+            this.render.removeClass(span , 'active')
+          })
+        })
+      }
 
-    //   }
-    //   // console.lo/g('bye')
-    //   return scrollPosition = window.scrollY;
-    // }
-
-
-
-
-
-
-    // console.log(window.scrollY)
-
-   })
-  // var frameNumber = 0;
-  // var playbackConst = 200;
-  // var vid = this.video.nativeElement;
-  // function scrollPlay(){
-  //   var frameNumber  = window.pageYOffset/playbackConst;
-  //   console.log(window.pageYOffset)
-  //   vid.currentTime  = frameNumber;
-  //   window.requestAnimationFrame(scrollPlay);
-  // }
+    //
 
 
+
+    //
+    })
   }
 }

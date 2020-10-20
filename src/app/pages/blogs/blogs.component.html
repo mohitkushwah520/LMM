@@ -16,7 +16,7 @@
     <div class="row position-relative">
       <div class="col-md-6 text-center" *ngFor="let item of blogsData">
         <div class="box text-center" [routerLink]="'/blog/'+item.id">
-          <div class="card text-center"  (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()">
+          <div class="card text-center arrow_cursor"><!--  (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()"-->
             <img [src]="item.blogImage" alt="blogImage">
             <!-- <div class="hover" [routerLink]="'/blog/'+item.id">
               <p class="text-white">{{item.blogHover}}</p>
@@ -28,6 +28,6 @@
   </div>
   <!-- <app-blog-detail></app-blog-detail> -->
 </div>
-<div class="lmm_cursor fa" #cursor>
+<!-- <div class="lmm_cursor fa" #cursor>
   <span></span>
-</div>
+</div> -->

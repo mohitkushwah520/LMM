@@ -1,40 +1,67 @@
-<!-- <style>
-  .client_image{display: flex;width: fit-content;}
-  .client_image span{width: 450px;height: 450px;margin:0 -1rem;display: inline-flex;justify-content: center;align-items: center;border-radius: 50%;border: 1px solid #aaa;}
-  .client_image span img{max-width: 150px;max-height: 150px;}
+<style>
+  .mouse{
+    width: 10px;
+    height : 10px;
+    position: fixed;
+    background : #00e6d7;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    pointer-events: none;
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.5s ,height 0.5s ,background-size 0.5s;
+    background-size: 0rem;
+  }
+  .mouse span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 80%;
+    border: 2px solid #00e6d7;
+    border-radius: 50%;
+    transform-origin: center;
+    transition: all 0.3s;
+  }
+  .mouse span.active{
+    width: 50px;
+    height: 50px;
+  }
+  .mouse.active{
+
+    width: 100px;
+    height: 100px;
+    transition: width 0.5s ,height 0.5s;
+
+  }
+  .mouse.shortVideo::after{
+    content: "\f04b";
+  }
+  .mainvideo{
+    background: url(../../../assets/media/cursorAnimaion/cross.png) #00e6d7;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 2rem;
+    /* transition: bacground 0.3s; */
+  }
+  .arrow_cursor{
+    background: url(../../../assets/media/cursorAnimaion/right_arrow.png) #00e6d7;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+    transition: background-size 0.5s;
+  }
 </style>
-<div class="container-fluid bg-dark">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="client_image">
-        <span *ngFor="let item of data">
-          <img [src]="item.imageUrl" alt="">
-        </span>
-      </div>
-    </div>
-  </div>
+<div class="mouse fa" id="mouse">
+  <span></span>
 </div>
-<video [src]="src" id="video" #video></video> -->
-<div style="height: 50vh;"></div>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-10 m-auto">
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item">
-          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-        </li>
-      </ul>
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">tab one</div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">tab two</div>
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">tab three</div>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- <div class="lmm_cursor fa" #cursor>
+  <span></span>
+</div> -->

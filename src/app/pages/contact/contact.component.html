@@ -31,7 +31,7 @@
               <div class="service_group d-flex justify-content-center align-items-center my-5 py-5">
                 <div class="checkbox mx-5" *ngFor="let item of servicsContent">
                   <input type="checkbox" [name]="item.name" [id]="item.name" (change)="onChange(item.name, $event.target.checked)">
-                  <label class="lmm_btn d-inline-block" [for]="item.name">{{item.name}}</label>
+                  <label class="lmm_btn d-inline-block circle_hover" [for]="item.name">{{item.name}}</label>
                 </div>
               </div>
             </div>
@@ -40,7 +40,7 @@
               <div class="service_group d-flex justify-content-center align-items-center my-5 py-5">
                 <div class="checkbox mx-5" *ngFor="let item of products">
                   <input type="checkbox" [name]="item.name" [id]="item.name" (change)="onChange(item.name, $event.target.checked)">
-                  <label class="lmm_btn d-inline-block" [for]="item.name">{{item.name}}</label>
+                  <label class="lmm_btn d-inline-block circle_hover" [for]="item.name">{{item.name}}</label>
                 </div>
               </div>
             </div>
@@ -49,7 +49,7 @@
               <div class="service_group d-flex justify-content-center align-items-center my-5 py-5">
                 <div class="checkbox mx-5" *ngFor="let item of hire">
                   <input type="checkbox" [name]="item.name" [id]="item.name" (change)="onChange(item.name, $event.target.checked)">
-                  <label class="lmm_btn d-inline-block" [for]="item.name">{{item.name}}</label>
+                  <label class="lmm_btn d-inline-block circle_hover" [for]="item.name">{{item.name}}</label>
                 </div>
               </div>
             </div>

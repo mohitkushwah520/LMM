@@ -18,6 +18,7 @@ export class AllworkComponent implements OnInit {
 
   // @ViewChild('video')video : Q<HTMLVideoElement>
   ngOnInit(): void {
+    // window.scroll(0,0)
     this.router.params.subscribe(data => {
       this.slug = data.slug;
       this.work.ourWork(this.slug).subscribe((data : Ourwork)=>{

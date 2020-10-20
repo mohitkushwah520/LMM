@@ -28,7 +28,7 @@
             </div>
             <div class="row">
               <div class="col-md-3 text-center" [routerLink]="'/blog/'+item.id" *ngFor="let item of blogDetail" [class.d-none]="item.id == this.id">
-                <img [src]="item.blogImage" alt="" (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()">
+                <img [src]="item.blogImage" alt="" class="arrow_cursor"><!-- (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()"-->
               </div>
             </div>
           </div>
@@ -37,6 +37,6 @@
     </div>
   </div><!--condition div-->
 </section>
-<div class="lmm_cursor fa" #cursor>
+<!-- <div class="lmm_cursor fa" #cursor>
   <span></span>
-</div>
+</div> -->

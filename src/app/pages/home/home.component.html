@@ -9,24 +9,26 @@
       <span class="lmm_h1 dot d-block"></span>
       <span class="lmm_h1 d-block">media</span>
   </div>
-  <a #btn><app-lmm-button ButtonText="our work" link="ourwork"></app-lmm-button></a>
+  <a #btn><app-lmm-button ButtonText="our work" routerLink="ourwork/allwork"></app-lmm-button></a>
 </div>
+<!-- <app-video></app-video> -->
+
 <div class="show_reel mt-5 pt-5">
   <div class="container-fluid">
     <div class="row">
       <div class="col-xl-5">
         <div class="content_box mt-4">
           <p class="text-justify mb-5">A design, strategy, technology and marketing (full-service digital agency) agency for the loud, the nimble and the game-changers. From small businesses to shark tank winners, we love working with businesses who are new-age, adaptive and think differently. We use innovative designs, strategies, marketing and technologies to create engaging experiences that attract attention and audiences, drive business and acquire fans. With loud storytelling at the core, we help growing businesses grow faster. Take a look at what we’ve already done/created.</p>
-          <a href="" class="mt-5 d-flex justify-content-end"><app-lmm-button ButtonText="about us" link="aboutUs"></app-lmm-button></a>
+          <a href="" class="mt-5 d-flex justify-content-end"><app-lmm-button ButtonText="about us" routerLink="aboutUs"></app-lmm-button></a>
         </div>
       </div>
       <div class="col-xl-7">
         <div class="media">
-          <div class="short_video" id="shortVideo" (click)="videoOpen()" (mouseover)="S_CursorIn()" (mouseout)="S_CursorOut()">
+          <div class="short_video" id="shortVideo" (click)="videoOpen()"><!-- (mouseover)="S_CursorIn()" (mouseout)="S_CursorOut()"-->
             <video src="../../../assets/media/video/short_video.mp4" #shortReel autoplay loop></video>
           </div>
           <div class="main_video" id="mainVideo">
-            <video #mainVideo src="../../../assets/media/video/short_video.mp4" (click)="videoClose()" id="mainVideo" (mouseover)="M_CursorIn()" (mouseout)="M_CursorOut()"></video>
+            <video #mainVideo src="../../../assets/media/video/short_video.mp4" (click)="videoClose()"></video><!-- (mouseover)="M_CursorIn()" (mouseout)="M_CursorOut()"-->
             <button id="sound" class="video_btn fa sound" (click)="sound()"></button>
             <button id="mute" class="video_btn fa mute" (click)="mute()"></button>
           </div>
@@ -50,9 +52,9 @@
     </div>
     <div class="row pt-5">
       <div class="col-md-9 m-auto">
-        <div class="our_recent_card" *ngFor="let item of our_recent">
+        <div class="our_recent_card arrow_cursor" [routerLink]="item.href" *ngFor="let item of our_recent">
           <p class="w-50">{{item.description}}</p>
-          <app-lottie [img_src]="item.img_src" [lottie_src]="item.lottie_src" [imgVisible]="true" [id]="item.id" (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()"></app-lottie>
+          <app-lottie [img_src]="item.img_src" [lottie_src]="item.lottie_src" [imgVisible]="true" [id]="item.id"></app-lottie><!-- (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()"-->
         </div>
       </div>
       <div class="col-md-9 m-auto">
@@ -72,7 +74,7 @@
           </h1>
         </div>
         <p class="m-auto text-justify">Design thinking, cohesive strategies and cutting-edge technologies infused with innovative experiences engage your target audiences in the most fascinating ways. The result? Positive awareness, fans acquired, a growing business and other important stuff. In the constantly changing marketplace, we build fresh brands that build trust, designs that always captivate, marketing that goes beyond conversions and technologies that challenge the status quo / make a statement.
-          <a href="" class="mt-5 d-flex justify-content-end"><app-lmm-button ButtonText="view services" link="services"></app-lmm-button></a>
+          <a href="" class="mt-5 d-flex justify-content-end"><app-lmm-button ButtonText="view services" routerLink="services"></app-lmm-button></a>
         </p>
       </div>
     </div>
@@ -117,7 +119,7 @@
       <div class="col-md-6 d-flex justify-content-center align-items-center">
         <div class="skating_des m-auto pr-5">
             <p class="text-justify text-white mb-5 pb-5">At Loud Mob Labs we  make targeted marketing smarter with our homegrown products. Exploiting the latest technological advancements like Facial recognition and augmented reality, we create an emotional connect with your consumers.</p>
-            <a href="" class="ml-auto mt-n5 d-flex justify-content-end"><app-lmm-button ButtonText="our labs" link="loudMobLab"></app-lmm-button></a>
+            <a href="" class="ml-auto mt-n5 d-flex justify-content-end"><app-lmm-button ButtonText="our labs" routerLink="loudMobLab"></app-lmm-button></a>
         </div>
       </div>
     </div>
@@ -131,7 +133,7 @@
   </div>
 </div>
 </div>
-<div class="lmm_cursor fa" #cursor>
+<!-- <div class="lmm_cursor fa" #cursor>
   <span></span>
-</div>
+</div> -->
 

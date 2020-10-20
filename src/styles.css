@@ -22,6 +22,11 @@
 /* ====common===== */
 body,html{
   font-size: 15px !important;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 *{
   margin: 0;
@@ -91,24 +96,7 @@ p{
   color: #232323;
   cursor: context-menu;
 }
-.lmm_btn{
-  background: transparent;
-  padding: 15px 0;
-  width: 220px;
-  font: 1.2rem VBold , sans-serif !important;
-  color: #00e6d7;
-  font-weight: 100;
-  text-align: center;
-  border-radius: 0 40px 0 40px;
-  display: block;
-  border: 2.5px solid #00e6d7;
-  z-index: 99;
-  cursor: pointer;
-}
-.lmm_btn:hover{
-  color: #fff;
-  background: #00e6d7;
-}
+
 .lmm_h1_stroke{
   font: 25rem vHeavy,sans-serif !important;
   color: transparent;
@@ -201,6 +189,133 @@ a.lmm_arrow_btn i{
   }
 
 }
+
+
+/* ==========plugins============ */
+
+/* ====lmm_btn======== */
+.lmm_btn{
+  background: transparent;
+  padding: 15px 0;
+  width: 220px;
+  font: 1.2rem VBold , sans-serif !important;
+  color: #00e6d7;
+  font-weight: 100;
+  text-align: center;
+  border-radius: 0 40px 0 40px;
+  display: block;
+  border: 2.5px solid #00e6d7;
+  z-index: 99;
+  cursor: pointer;
+}
+.lmm_btn:hover{
+  color: #fff;
+  background: #00e6d7;
+}
+
+
+/* =======lottieplayer====== */
+.lmm_lottie{
+  position: relative;
+}
+.lmm_lottie .lottie_thumbnail{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.lmm_lottie .lmm_lottie_player{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+/* ==========rail-text======= */
+.lmm_rail_plugin{
+  width: 100%;
+  overflow: hidden;
+}
+.lmm_rail_plugin .lmm_h5_stroke{
+  display: inline;
+  padding: 0 2rem;
+  white-space: pre;
+}
+.lmm_rail_content{
+  display: flex;
+}
+.lmm_rail_container{
+  width: max-content;
+}
+
+
+/* ========scrollTide ======= */
+.scrolltideText{
+  width: 100%;
+}
+
+
+
+/* ====Social===== */
+.social-left{
+  position: fixed;
+  top: 22%;
+  left: 0;
+  z-index: 98;
+}
+.social-left svg{
+  width: 19.5px;
+  height: 19.5px;
+}
+.st0{
+  fill:#494949;
+}
+.social-left svg.behance:hover .st0{
+  fill: #053eff;
+}
+.social-left svg.instagram:hover .st0{
+  fill: #dd2a7b;
+}
+.social-left svg.pinterest:hover .st0{
+  fill: #c8232c;
+}
+.social-left img{
+  width: 1.3rem;
+  right: 1.3rem;
+}
+.ul-sLeft{
+  padding: 10px 5px 10px 4.2px ;
+  margin: 0;
+  display: inline-block;
+  background: #d4f4f2;
+
+}
+.ul-sLeft li{
+  margin: 0.2rem;
+  text-align: center;
+}
+.ul-sLeft li a{
+  padding: 0.2rem;
+  display: inline-block;
+  font-family:Vextrabold,sans-serif !important ;
+  color: #222;
+  font-size:1.3rem;
+}
+.social-right{
+  position: fixed;
+  top: 22%;
+  right: 0;
+  z-index: 98;
+}
+.s-right img{
+  width: 40px;
+  height: 145px;
+}
+
+
+
+
+
+
 /* ======header===== */
 .lmm_header{
   z-index: 98;
@@ -222,6 +337,10 @@ a.lmm_arrow_btn i{
 .nav-item.active a{
   color: #232323;
 }
+
+
+
+
 /* =========footer======== */
 .monkey_wrap{
   background: #4f4f4f;
@@ -252,6 +371,15 @@ a.lmm_arrow_btn i{
   z-index: 1;
   overflow: hidden;
 }
+
+
+
+
+/* ====================================================================
+                                pages
+====================================================================== */
+
+
 
 /* =====banner====== */
 .banner{
@@ -328,10 +456,11 @@ a.lmm_arrow_btn i{
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 0;
   height: 100vh;
   z-index: 99;
   display: none;
+  transition: width 0.5s;
 }
 .main_video video{
   width: 100%;
@@ -339,7 +468,7 @@ a.lmm_arrow_btn i{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50.1%,-50%);
+  transform: translate(-50%,-50%);
 }
 button.video_btn{
   position: fixed;
@@ -453,6 +582,11 @@ button.video_btn.mute::after{
   left: 50%;
   transform: translate(-50%,-50%);
 }
+.home_services #LottieDesign{
+  margin: auto;
+  width: 95% !important;
+  height: 95% !important;
+}
 .home_services .lmm_marquee{
   transform: translateY(-210%);
 }
@@ -550,61 +684,7 @@ button.video_btn.mute::after{
   overflow: hidden;
 } */
 
-/* ====Social===== */
-.social-left{
-  position: fixed;
-  top: 22%;
-  left: 0;
-  z-index: 98;
-}
-.social-left svg{
-  width: 19.5px;
-  height: 19.5px;
-}
-.st0{
-  fill:#494949;
-}
-.social-left svg.behance:hover .st0{
-  fill: #053eff;
-}
-.social-left svg.instagram:hover .st0{
-  fill: #dd2a7b;
-}
-.social-left svg.pinterest:hover .st0{
-  fill: #c8232c;
-}
-.social-left img{
-  width: 1.3rem;
-  right: 1.3rem;
-}
-.ul-sLeft{
-  padding: 10px 5px 10px 4.2px ;
-  margin: 0;
-  display: inline-block;
-  background: #d4f4f2;
 
-}
-.ul-sLeft li{
-  margin: 0.2rem;
-  text-align: center;
-}
-.ul-sLeft li a{
-  padding: 0.2rem;
-  display: inline-block;
-  font-family:Vextrabold,sans-serif !important ;
-  color: #222;
-  font-size:1.3rem;
-}
-.social-right{
-  position: fixed;
-  top: 22%;
-  right: 0;
-  z-index: 98;
-}
-.s-right img{
-  width: 40px;
-  height: 145px;
-}
 @media screen and (max-width : 1880px){
   .short_video{
     width: 1015px;
@@ -663,7 +743,29 @@ button.video_btn.mute::after{
     width: 32% !important;
   }
 } /*max-width : 1600px*/
+
+
+
+
+
+
+
+
+
+
+
 /* ========services page======== */
+
+
+
+
+
+
+
+
+
+
+
 /* .services_banner{
   position: relative;
 } */
@@ -1045,6 +1147,27 @@ section.about p{
   background: rgba(79, 79, 79, 1);
 }
 
+/* =====caseStudy Detail========== */
+.casestudy_banner{
+  overflow: hidden;
+  position: relative;
+}
+.casestudy_banner video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+  width: 105%;
+  height: 100vh;
+}
+.casestudy_detail-2 img{
+  width: 100%;
+}
+.casestudy_detail-2 video{
+  width: 100%;
+  height: 100%;
+  margin: -1rem 0;
+}
 /* ======our Process============== */
 .ourProcess_banner{
   height: 65vh !important;
@@ -1139,7 +1262,8 @@ section.about p{
   text-transform: capitalize;
 }
 .contact_wrap_1 .lmm_btn:hover{
-  color: #fff;
+  color: #00e6d7;
+  background: transparent;
 }
 .contact_wrap_1 .checkbox input{
   display: none;
@@ -1434,24 +1558,12 @@ section.about p{
 }
 
 
-.lmm_rail_plugin{
-  width: 100%;
-  overflow: hidden;
-}
-.lmm_rail_plugin .lmm_h5_stroke{
-  display: inline;
-  padding: 0 2rem;
-  white-space: pre;
-}
-.lmm_rail_content{
-  display: flex;
-}
-.lmm_rail_container{
-  width: max-content;
-}
+
+
 .lmm_marquee_plugin{
   width: 100%;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .magnet {
@@ -1459,108 +1571,13 @@ section.about p{
 }
 
 
-.lmm_cursor{
-  width: 30px;
-  height: 30px;
-  background: #00e6d7;
-  border-radius: 50%;
-  position: fixed;
-  transform: translate(-50%,-50%);
-  z-index: 100;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-}
-.lmm_cursor span{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60%;
-  height: 60%;
-  background: transparent;
-  border: 2px solid #00e6d7;
-  transform: translate(-50% , -50%);
-  border-radius: 50%;
-  transition: all 0.2s;
-  /* display: none; */
-}
-.lmm_cursor span.active{
-  width: 250%;
-  height: 250%;
-  transition: all 0.2s;
-}
-.lmm_cursor_1{
-  z-index: 99;
-}
-
-.lmm_cursor.active{
-  width: 100px;
-  height: 100px;
-}
-.lmm_cursor.playVideo::after,.lmm_cursor.stopVideo::after,.lmm_cursor.lottie::after{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-
-}
-.lmm_cursor.playVideo::after{
-  content: "\f04b";
-}
-.lmm_cursor.stopVideo::after{
-  content: "";
-  background: url(./assets/media/cursorAnimaion/cross.png) no-repeat;
-  background-size: 2rem;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  background-position: center center;
-
-}
-.lmm_cursor.lottie::after{
-  content: "";
-  background: url(./assets/media/cursorAnimaion/right_arrow.png) no-repeat;
-  background-size: 2.5rem;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  background-position: center center;
-}
 
 
 
 
 
 /* ========plugins========= */
-.scrolltideText{
-  width: 100%;
-}
-.lmm_lottie{
-  position: relative;
-}
-.lmm_lottie .lottie_thumbnail{
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* z-index: -2; */
-}
-.lmm_lottie .lmm_lottie_player{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  /* z-index: 2; */
-  /* display: none; */
-}
 
-/* =====bootstrap changes======== */
-/* ==for tabs our work====== */
 
-/* .nav-tabs:hover .nav-link.active:hover{
-  border: none;
-}
-.nav-tabs .nav-link {
-  border: none;
-} */
+
+/* =======plugins====== */

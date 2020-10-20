@@ -17,41 +17,45 @@ const routes: Routes = [
     component : CaseStudyComponent
   },
   {
-    path : 'caseStudy/persona',
-    component : PersonaComponent
-  },
-  {
-    path : 'caseStudy/bytbond',
-    component : BytbondComponent
-  },
-  {
-    path : 'caseStudy/cocalite',
-    component : CocaliteComponent
-  },
-  {
-    path : 'caseStudy/eyehop',
+    path : 'caseStudy/:slug',
     component : EyehopComponent
-  },
-  {
-    path : 'caseStudy/milkpaint',
-    component : MilkpaintComponent
-  },
-  {
-    path : 'caseStudy/morningkick',
-    component : MorningkickComponent
-  },
-  {
-    path : 'caseStudy/mymee',
-    component : MymeeComponent
-  },
-  {
-    path : 'caseStudy/rapidale',
-    component : RapidaleComponent
-  },
-  {
-    path : 'caseStudy/urbanpaws',
-    component : UrbanpawsComponent
   }
+  // {
+  //   path : 'caseStudy/persona',
+  //   component : PersonaComponent
+  // },
+  // {
+  //   path : 'caseStudy/bytbond',
+  //   component : BytbondComponent
+  // },
+  // {
+  //   path : 'caseStudy/cocoalite',
+  //   component : CocaliteComponent
+  // },
+  // {
+  //   path : 'caseStudy/eyehop',
+  //   component : EyehopComponent
+  // },
+  // {
+  //   path : 'caseStudy/milkpaint',
+  //   component : MilkpaintComponent
+  // },
+  // {
+  //   path : 'caseStudy/morningkick',
+  //   component : MorningkickComponent
+  // },
+  // {
+  //   path : 'caseStudy/mymee',
+  //   component : MymeeComponent
+  // },
+  // {
+  //   path : 'caseStudy/rapidale',
+  //   component : RapidaleComponent
+  // },
+  // {
+  //   path : 'caseStudy/urbanpaws',
+  //   component : UrbanpawsComponent
+  // }
 ];
 
 @NgModule({

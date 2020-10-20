@@ -1,5 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Router }from '@angular/router'
+import { ActivatedRoute, Router }from '@angular/router';
+import * as $ from 'jquery';
+
+
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -8,19 +11,10 @@ import { Router }from '@angular/router'
 export class FooterComponent implements OnInit {
 
 
-  @ViewChild('cursor')cursor : ElementRef;
-  constructor(private route : Router) { }
+  constructor(private route : ActivatedRoute) { }
 
   ngOnInit(): void {
-  }
-  ngAfterViewInit(): void{
-      this.cursorAnimation();
-  }
-  cursorAnimation(){
-    this.cursor.nativeElement.style.pointerEvents = 'none';
-    document.body.addEventListener('mousemove',(e)=>{
-      this.cursor.nativeElement.style.top = e.clientY+'px';
-      this.cursor.nativeElement.style.left = e.clientX+'px';
-    })//cursor
+    // // console.log(document.getElementsByClassName('footer').scrollHeight)
+    // $(window).scroll(console.log('hii'))
   }
 }

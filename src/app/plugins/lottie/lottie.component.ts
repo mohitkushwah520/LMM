@@ -29,7 +29,7 @@ export class LottieComponent implements OnInit {
         {
           visibility:[0.1,1],
           type: 'seek',
-          frames: [0],
+          frames: [600],
         }
       ],
     });
