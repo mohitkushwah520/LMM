@@ -27,6 +27,7 @@ body,html{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: none !important;
 }
 *{
   margin: 0;
@@ -40,10 +41,12 @@ ul{
 a{
   text-decoration: none;
   color: #999;
+  cursor: none !important;
 }
 a:hover{
   text-decoration: none;
   color: #999;
+  cursor: none !important;
 }
 
 img{
@@ -94,7 +97,7 @@ a.nav-link{
 p{
   font: 1.5rem VMedium ,sans-serif !important;
   color: #232323;
-  cursor: context-menu;
+  /* cursor: context-menu; */
 }
 
 .lmm_h1_stroke{
@@ -206,7 +209,7 @@ a.lmm_arrow_btn i{
   display: block;
   border: 2.5px solid #00e6d7;
   z-index: 99;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .lmm_btn:hover{
   color: #fff;
@@ -364,7 +367,7 @@ a.lmm_arrow_btn i{
   font-weight: 400;
 }
 .monkey_wrap .lmm_h1{
-  font: 6.25rem VHeavy,sans-serif !important;
+  font: 5.25rem VHeavy,sans-serif !important;
   line-height: 6.25rem;
 }
 .footer_video{
@@ -456,7 +459,7 @@ a.lmm_arrow_btn i{
   position: fixed;
   top: 0;
   left: 0;
-  width: 0;
+  width: 0%;
   height: 100vh;
   z-index: 99;
   display: none;
@@ -471,7 +474,7 @@ a.lmm_arrow_btn i{
   transform: translate(-50%,-50%);
 }
 button.video_btn{
-  position: fixed;
+  position: absolute;
   bottom: 2%;
   right: 2%;
   z-index: 99;
@@ -564,7 +567,7 @@ button.video_btn.mute::after{
   margin-right: 4%;
 }
 .home_services .lmm_h5{
-  cursor: pointer;
+  /* cursor: pointer; */
   outline: none;
 }
 .home_services li{
@@ -964,11 +967,11 @@ button.video_btn.mute::after{
   background: #999;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
+  /* cursor: pointer; */
   z-index: 1;
   border-radius: 6px;
   left: 10%;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 /* .blogs .card .hover{
   position: absolute;
@@ -1119,7 +1122,7 @@ section.about p{
   transform: translateX(-50%);
   z-index: 1000;
   text-align: center;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .caseStudy_banner .scroll .lottie{
   width: 120px;
@@ -1132,7 +1135,7 @@ section.about p{
   overflow: hidden;
   width: 100%;
   height: 600px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .lottie_box h1{
   position: absolute;

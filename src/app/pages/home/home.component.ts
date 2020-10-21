@@ -233,6 +233,7 @@ export class HomeComponent implements OnInit  {
     var video = document.getElementById('mainVideo')
     // this.rendr.setStyle(video , 'width','100%')
     $(video).stop().animate({'width':'100%'},100)
+
     this.mainVideo.nativeElement.play();
     this.mainVideo.nativeElement.muted = false;
     this.mainVideo.nativeElement.currentTime = 0;
@@ -240,7 +241,7 @@ export class HomeComponent implements OnInit  {
   videoClose(){
     // document.getElementById('mainVideo').style.display = 'none';
     var video = document.getElementById('mainVideo');
-    $(video).stop().animate({'width':'0%','display':'none'},100)
+    $(video).stop().animate({'width' : '0%','display':'none'},100)
     this.mainVideo.nativeElement.muted = true;
   }
   sound(){
@@ -253,49 +254,5 @@ export class HomeComponent implements OnInit  {
     document.getElementById('sound').style.display='block';
     this.mainVideo.nativeElement.muted = true;
   }
-  // cursorAnimation(){
-  //   this.cursor.nativeElement.style.pointerEvents = 'none';
-  //   document.body.addEventListener('mousemove',(e)=>{
-  //     this.cursor.nativeElement.style.top = e.clientY+'px';
-  //     this.cursor.nativeElement.style.left = e.clientX+'px';
-  //   })//cursor
-  // }
-  // S_CursorIn(){
-  //   this.cursor.nativeElement.classList.add('playVideo');
-  //   this.cursor.nativeElement.classList.add('active');
-  // }
-  // S_CursorOut(){
-  //   this.cursor.nativeElement.classList.remove('playVideo');
-  //   this.cursor.nativeElement.classList.remove('active');
-  // }
-  // M_CursorIn(){
-  //   this.cursor.nativeElement.classList.add('stopVideo');
-  //   this.cursor.nativeElement.classList.add('active');
-  // }
-  // M_CursorOut(){
-  //   this.cursor.nativeElement.classList.remove('stopVideo');
-  //   this.cursor.nativeElement.classList.remove('active');
-  // }
-  // L_CursorIn(){
-  //   this.cursor.nativeElement.classList.add('active');
-  //   this.cursor.nativeElement.classList.add('lottie');
-  // }
-  // L_CursorOut(){
-  //   this.cursor.nativeElement.classList.remove('active');
-  //   this.cursor.nativeElement.classList.remove('lottie');
-  // }
-  // Cursor_lmm_arrow_link(){
-  //   window.setTimeout(()=>{
-  //     var all = document.querySelectorAll('.lmm_arrow_btn');
-  //     all.forEach((el)=>{
-  //       el.addEventListener('mouseover',()=>{
-  //         this.cursor.nativeElement.children[0].classList.add('active');
-  //       })//hover
-  //       el.addEventListener('mouseout',()=>{
-  //         this.cursor.nativeElement.children[0].classList.remove('active');
-  //       })
-  //     })//forEach
-  //   },1000)//timeout
-  // }
 
 }

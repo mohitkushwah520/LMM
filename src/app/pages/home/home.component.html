@@ -42,15 +42,15 @@
     </h1>
   </div>
 </div>
-<div class="our_recent">
+<div class="our_recent pt-5">
   <div class="container-fluid">
     <div class="row">
-      <div class="w-25 text-right">
+      <div class="w-25 text-right mt-5">
         <span class="lmm_h1 d-block">our</span>
         <span class="lmm_h1 d-block">recent</span>
       </div>
     </div>
-    <div class="row pt-5">
+    <div class="row pt-0">
       <div class="col-md-9 m-auto">
         <div class="our_recent_card arrow_cursor" [routerLink]="item.href" *ngFor="let item of our_recent">
           <p class="w-50">{{item.description}}</p>

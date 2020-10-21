@@ -5,6 +5,8 @@ import { ReactiveFormsModule }from '@angular/forms';
 import { OurWorkModule } from './pages/our-work/our-work.module';
 import { ServicesModule }from './pages/services/services.module';
 import { PluginsModule }from './plugins/plugins.module';
+import { CaseStudyModule }from './pages/case-study/case-study.module';
+import { BlogsModule }from './pages/blogs/blogs.module';
 
 
 
@@ -18,7 +20,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule }from '@angular/material/dialog';
-import { BlogsComponent } from './pages/blogs/blogs.component';
+// import { BlogsComponent } from './pages/blogs/blogs.component';
 import { LmmDialogComponent } from './material/lmm-dialog/lmm-dialog.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { CaseStudyComponent } from './pages/case-study/case-study.component';
@@ -28,11 +30,10 @@ import { LoudMobLabComponent } from './pages/loud-mob-lab/loud-mob-lab.component
 import { LmmScrolling } from './plugins/lmm-scrolling';
 // import { RailTextComponent } from './plugins/rail-text/rail-text.component';
 // import { ServiceDetailComponent } from './pages/services/service-detail/service-detail.component';
-import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
+// import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
 // import { LmmButtonComponent } from './plugins/lmm-button/lmm-button.component';
 import { SocialSitesComponent } from './plugins/social-sites/social-sites.component';
 import { MonkeyFooterComponent } from './shared/monkey-footer/monkey-footer.component';
-import { CaseStudyModule }from './pages/case-study/case-study.module';
 // import { VideoComponent } from './plugins/video/video.component';
 // import { ScrolltideComponent } from './plugins/scrolltide/scrolltide.component';
 // import { LottieComponent } from './plugins/lottie/lottie.component';
@@ -45,7 +46,7 @@ import { CaseStudyModule }from './pages/case-study/case-study.module';
     HomeComponent,
     // ServicesComponent,
     // OurWorkComponent,
-    BlogsComponent,
+    // BlogsComponent,
     LmmDialogComponent,
     AboutUsComponent,
     CaseStudyComponent,
@@ -54,7 +55,7 @@ import { CaseStudyModule }from './pages/case-study/case-study.module';
     LoudMobLabComponent,
     // RailTextComponent,
     // ServiceDetailComponent,
-    BlogDetailComponent,
+    // BlogDetailComponent,
     // LmmButtonComponent,
     SocialSitesComponent,
     MonkeyFooterComponent
@@ -74,7 +75,8 @@ import { CaseStudyModule }from './pages/case-study/case-study.module';
     MatDialogModule,
     OurWorkModule,
     ServicesModule,
-    PluginsModule
+    PluginsModule,
+    BlogsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

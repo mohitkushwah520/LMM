@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl ,FormBuilder, FormArray, Validators }from '@angular/forms'
+import { Router } from '@angular/router';
 import { from } from 'rxjs';
 import { ContactService }from '../../services/contact.service';
 // import { lmmFormAnimation}from '../../../assets/js/lmmform.js';
@@ -20,10 +21,11 @@ export class ContactComponent implements OnInit {
   get companyName(){ return this.contactform.get('companyName') };
   get phoneNumber(){ return this.contactform.get('phoneNumber') };
 
-  constructor(private fb : FormBuilder ,private _contactService : ContactService) { }
+  constructor(private fb : FormBuilder ,private _contactService : ContactService,private router : Router) {
+    // router.events.subscribe((e)=>{console.log(e)})
+   }
 
   ngOnInit(): void {
-    window.scroll(0,0);
     setTimeout(() => {
       this.lmmAnimation(window)
     }, 1000);

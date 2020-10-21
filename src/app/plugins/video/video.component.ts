@@ -60,13 +60,13 @@ export class VideoComponent implements OnInit {
       }else{
         linkArrow.forEach((el)=>{
             el.addEventListener('mouseover',()=>{
-              this.render.addClass(span , 'active')
+              this.render.addClass(span , 'active');
             })
             el.addEventListener('mouseout',()=>{
-              this.render.removeClass(span , 'active')
+              this.render.removeClass(span , 'active');
             })
             el.addEventListener('click',()=>{
-              this.render.removeClass(span , 'active')
+              this.render.removeClass(span , 'active');
             })
           })
       }
@@ -95,13 +95,13 @@ export class VideoComponent implements OnInit {
       }else{
         circlemouse.forEach((el)=>{
           el.addEventListener('mouseover',()=>{
-            this.render.addClass(span , 'active')
+            this.render.addClass(span , 'active');
           })
           el.addEventListener('mouseout',()=>{
-            this.render.removeClass(span , 'active')
+            this.render.removeClass(span , 'active');
           })
           el.addEventListener('click',()=>{
-            this.render.removeClass(span , 'active')
+            this.render.removeClass(span , 'active');
           })
         })
       }

@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute }from '@angular/router';
-import { AllServicesService }from '../../services/all-services.service';
+import { AllServicesService }from '../../../services/all-services.service';
 
 @Component({
   selector: 'app-blog-detail',
@@ -15,7 +15,7 @@ export class BlogDetailComponent implements OnInit {
   constructor(private router : ActivatedRoute , private service : AllServicesService) { }
 
   ngOnInit(): void {
-    window.scroll(0,0);
+    // window.scroll(0,0);
     this.router.paramMap.subscribe(result =>{
       this.id = result.get('id');
       this.service.blogs().subscribe(data => {

@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { from } from 'rxjs';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
-import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
-import { BlogsComponent } from './pages/blogs/blogs.component';
+// import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
+// import { BlogsComponent } from './pages/blogs/blogs.component';
 import { CaseStudyComponent } from './pages/case-study/case-study.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -34,10 +34,10 @@ const routes: Routes = [
   //   component : ServicesComponent
   // },
 
-  {
-    path : 'blogs',
-    component : BlogsComponent
-  },
+  // {
+  //   path : 'blogs',
+  //   component : BlogsComponent
+  // },
   {
     path : 'aboutUs',
     component : AboutUsComponent
@@ -53,20 +53,20 @@ const routes: Routes = [
   {
     path : 'loudMobLab',
     component : LoudMobLabComponent
-  },
+  }
   // {
   //   path : 'service/:slug',
   //   component : ServiceDetailComponent
   // },
-  {
-    path : 'blog/:id',
-    component : BlogDetailComponent
-  }
+  // {
+  //   path : 'blog/:id',
+  //   component : BlogDetailComponent
+  // }
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes ,{scrollPositionRestoration : 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

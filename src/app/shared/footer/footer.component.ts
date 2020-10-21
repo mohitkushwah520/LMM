@@ -14,6 +14,9 @@ export class FooterComponent implements OnInit {
   constructor(private route : ActivatedRoute) { }
 
   ngOnInit(): void {
+    // window.setTimeout(()=>{
+    //   console.log(document.documentElement.scrollHeight)
+    // },1000)
     // // console.log(document.getElementsByClassName('footer').scrollHeight)
     // $(window).scroll(console.log('hii'))
   }

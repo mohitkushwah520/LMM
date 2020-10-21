@@ -17,7 +17,7 @@ export class ServiceDetailComponent implements OnInit {
   constructor(private router:ActivatedRoute , private service : AllServicesService ) { }
 
   ngOnInit(): void {
-    window.scroll(0,0)
+    // window.scroll(0,0)
     this.router.paramMap.subscribe(
       result => {
         this.title = result.get('slug');
@@ -26,8 +26,6 @@ export class ServiceDetailComponent implements OnInit {
           })//banner
           this.service.serviceDetailpageContent(this.title).subscribe((data : any) =>{
             this.pageContentData = data;
-            window.onload = function(){
-            }
           })
       }
     )
