@@ -1,7 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { OurworkService }from '../../services/ourwork.service';
+// import { OurworkService }from '../../services/ourwork.service';
 import { create }from '@lottiefiles/lottie-interactivity';
-import { AllServicesService }from '../../services/all-services.service';
+// import { AllServicesService }from './../services/all-services.service';
+import{ AllServicesService } from'../../services/all-services.service'
 
 @Component({
   selector: 'app-our-process',

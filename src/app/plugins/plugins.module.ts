@@ -33,4 +33,8 @@ import { ClientsAPIComponent } from './clients-api/clients-api.component'
     LmmButtonComponent
   ]
 })
-export class PluginsModule { }
+export class PluginsModule {
+  constructor(){
+    console.log('plugins module')
+  }
+}

@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoudMobLabComponent } from './pages/loud-mob-lab/loud-mob-lab.component';
 import { OurProcessComponent } from './pages/our-process/our-process.component';
 import { OurWorkComponent } from './pages/our-work/our-work.component';
+import { ClientsAPIComponent } from './plugins/clients-api/clients-api.component';
 // import { ServiceDetailComponent } from './pages/services/service-detail/service-detail.component';
 // import { ServicesComponent } from './pages/services/services.component';
 // import { LmmButtonComponent } from './plugins/lmm-button/lmm-button.component';
@@ -20,10 +21,28 @@ import { OurWorkComponent } from './pages/our-work/our-work.component';
 // import { }from ''
 
 
+
+
 const routes: Routes = [
   {
     path : '',
     component : HomeComponent
+  },
+  {
+    path : 'blogs',
+    loadChildren: () => import('./pages/blogs/blogs.module').then(m => m.BlogsModule)
+  },
+  {
+    path : 'caseStudy',
+    loadChildren : ()=>import('./pages/case-study/case-study.module').then(m => m.CaseStudyModule)
+  },
+  {
+    path : 'ourwork',
+    loadChildren : ()=> import('./pages/our-work/our-work.module').then(m => m.OurWorkModule)
+  },
+  {
+    path : 'services',
+    loadChildren : ()=>import('./pages/services/services.module').then(m => m.ServicesModule)
   },
   // {
   //   path : 'plugins',
@@ -38,6 +57,10 @@ const routes: Routes = [
   //   path : 'blogs',
   //   component : BlogsComponent
   // },
+  {
+    path : 'plugins',
+    component : ClientsAPIComponent
+  },
   {
     path : 'aboutUs',
     component : AboutUsComponent

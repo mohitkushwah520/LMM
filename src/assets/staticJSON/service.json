@@ -7,7 +7,7 @@
     "href" : "/ourwork/allwork",
     "lottie1" : "",
     "lottie2" : "",
-    "readmore_href" : "/service/design"
+    "readmore_href" : "/services/design"
   },
   {
     "id" : 1,
@@ -17,7 +17,7 @@
     "href" : "/ourwork/allwork",
     "lottie1" : "",
     "lottie2" : "",
-    "readmore_href" : "/service/branding"
+    "readmore_href" : "/services/branding"
   },
   {
     "id" : 1,
@@ -27,7 +27,7 @@
     "href" : "/ourwork/allwork",
     "lottie1" : "",
     "lottie2" : "",
-    "readmore_href" : "/service/marketing"
+    "readmore_href" : "/services/marketing"
   },
   {
     "id" : 1,
@@ -37,6 +37,6 @@
     "href" : "/ourwork/allwork",
     "lottie1" : "",
     "lottie2" : "",
-    "readmore_href" : "/service/apps_Websites"
+    "readmore_href" : "/services/apps_Websites"
   }
 ]

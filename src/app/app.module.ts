@@ -2,12 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule }from '@angular/forms';
-import { OurWorkModule } from './pages/our-work/our-work.module';
-import { ServicesModule }from './pages/services/services.module';
 import { PluginsModule }from './plugins/plugins.module';
-import { CaseStudyModule }from './pages/case-study/case-study.module';
-import { BlogsModule }from './pages/blogs/blogs.module';
-
+import { InfiniteScrollModule }from 'ngx-infinite-scroll'
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,20 +19,13 @@ import { MatDialogModule }from '@angular/material/dialog';
 // import { BlogsComponent } from './pages/blogs/blogs.component';
 import { LmmDialogComponent } from './material/lmm-dialog/lmm-dialog.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
-import { CaseStudyComponent } from './pages/case-study/case-study.component';
+// import { CaseStudyComponent } from './pages/case-study/case-study.component';
 import { OurProcessComponent } from './pages/our-process/our-process.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { LoudMobLabComponent } from './pages/loud-mob-lab/loud-mob-lab.component';
 import { LmmScrolling } from './plugins/lmm-scrolling';
-// import { RailTextComponent } from './plugins/rail-text/rail-text.component';
-// import { ServiceDetailComponent } from './pages/services/service-detail/service-detail.component';
-// import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
-// import { LmmButtonComponent } from './plugins/lmm-button/lmm-button.component';
 import { SocialSitesComponent } from './plugins/social-sites/social-sites.component';
 import { MonkeyFooterComponent } from './shared/monkey-footer/monkey-footer.component';
-// import { VideoComponent } from './plugins/video/video.component';
-// import { ScrolltideComponent } from './plugins/scrolltide/scrolltide.component';
-// import { LottieComponent } from './plugins/lottie/lottie.component';
 
 @NgModule({
   declarations: [
@@ -44,39 +33,30 @@ import { MonkeyFooterComponent } from './shared/monkey-footer/monkey-footer.comp
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    // ServicesComponent,
-    // OurWorkComponent,
-    // BlogsComponent,
     LmmDialogComponent,
     AboutUsComponent,
-    CaseStudyComponent,
     OurProcessComponent,
     ContactComponent,
     LoudMobLabComponent,
-    // RailTextComponent,
-    // ServiceDetailComponent,
-    // BlogDetailComponent,
-    // LmmButtonComponent,
     SocialSitesComponent,
     MonkeyFooterComponent
-    // VideoComponent,
-    // ScrolltideComponent,
-    // LottieComponent
   ],
   entryComponents :[LmmDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CaseStudyModule,
+
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatTabsModule,
     MatDialogModule,
-    OurWorkModule,
-    ServicesModule,
     PluginsModule,
-    BlogsModule
+    InfiniteScrollModule
+    // CaseStudyModule,
+    // OurWorkModule,
+    // ServicesModule
+    // BlogsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
@@ -86,4 +66,8 @@ import { MonkeyFooterComponent } from './shared/monkey-footer/monkey-footer.comp
   ],
   exports : []
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){
+    console.log('app module')
+  }
+ }

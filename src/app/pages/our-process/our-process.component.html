@@ -16,6 +16,7 @@
       <div class="col-md-12">
         <div class="ourprocess_lottie" *ngFor="let item of ourprocessdata">
           <lottie-player [src]="item.lottieURl" [id]="item.id" speed="10" loop></lottie-player>
+          <!-- <app-lottie></app-lottie> -->
           <div class="content_box">
             <h1>{{item.heading}}</h1>
             <p>{{item.peragraph}}</p>

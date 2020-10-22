@@ -6,7 +6,18 @@ import { OurWorkRoutingModule } from './our-work-routing.module';
 
 import { OurWorkComponent }from './our-work.component';
 import { AllworkComponent } from './allwork/allwork.component';
+import { RouterModule, Routes } from '@angular/router';
 
+
+const ourworkConst : Routes = [
+  {
+    path : '',
+    component : OurWorkComponent,
+    children : [
+      {path : ':slug',component : AllworkComponent}
+    ]
+  }
+]
 
 @NgModule({
   declarations: [
@@ -15,8 +26,13 @@ import { AllworkComponent } from './allwork/allwork.component';
   ],
   imports: [
     CommonModule,
-    OurWorkRoutingModule,
+    // OurWorkRoutingModule,
+    RouterModule.forChild(ourworkConst),
     PluginsModule
   ]
 })
-export class OurWorkModule { }
+export class OurWorkModule {
+  constructor(){
+    console.log('work module')
+  }
+}

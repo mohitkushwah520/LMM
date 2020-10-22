@@ -1,64 +1,73 @@
-<div class="banner">
-  <div class="video">
-      <video id="hero" autoplay #herovideo muted src="../../../assets/media/video/Hero_Video.mp4">
-      </video>
+<div class="search-results" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+  <div class="banner">
+    <div class="video">
+        <video id="hero">
+          <source src="assets/media/video/Hero_Video.mp4">
+        </video>
+    </div>
+    <div class="banner_content w-25 text-right" #title>
+        <span class="lmm_h1 d-block">loud</span>
+        <span class="lmm_h1 d-block">mob</span>
+        <span class="lmm_h1 dot d-block"></span>
+        <span class="lmm_h1 d-block">media</span>
+    </div>
+    <a #btn><app-lmm-button ButtonText="our work" routerLink="ourwork/allwork"></app-lmm-button></a>
   </div>
-  <div class="banner_content w-25 text-right" #title>
-      <span class="lmm_h1 d-block">loud</span>
-      <span class="lmm_h1 d-block">mob</span>
-      <span class="lmm_h1 dot d-block"></span>
-      <span class="lmm_h1 d-block">media</span>
-  </div>
-  <a #btn><app-lmm-button ButtonText="our work" routerLink="ourwork/allwork"></app-lmm-button></a>
-</div>
-<!-- <app-video></app-video> -->
-
-<div class="show_reel mt-5 pt-5">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xl-5">
-        <div class="content_box mt-4">
-          <p class="text-justify mb-5">A design, strategy, technology and marketing (full-service digital agency) agency for the loud, the nimble and the game-changers. From small businesses to shark tank winners, we love working with businesses who are new-age, adaptive and think differently. We use innovative designs, strategies, marketing and technologies to create engaging experiences that attract attention and audiences, drive business and acquire fans. With loud storytelling at the core, we help growing businesses grow faster. Take a look at what we’ve already done/created.</p>
-          <a href="" class="mt-5 d-flex justify-content-end"><app-lmm-button ButtonText="about us" routerLink="aboutUs"></app-lmm-button></a>
-        </div>
-      </div>
-      <div class="col-xl-7">
-        <div class="media">
-          <div class="short_video" id="shortVideo" (click)="videoOpen()"><!-- (mouseover)="S_CursorIn()" (mouseout)="S_CursorOut()"-->
-            <video src="../../../assets/media/video/short_video.mp4" #shortReel autoplay loop></video>
+</div> <!--infinte scroll-->
+<div class="search-results" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="workData()">
+  <div class="show_reel mt-5 pt-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-5">
+          <div class="content_box mt-4">
+            <p class="text-justify mb-5">A design, strategy, technology and marketing (full-service digital agency) agency for the loud, the nimble and the game-changers. From small businesses to shark tank winners, we love working with businesses who are new-age, adaptive and think differently. We use innovative designs, strategies, marketing and technologies to create engaging experiences that attract attention and audiences, drive business and acquire fans. With loud storytelling at the core, we help growing businesses grow faster. Take a look at what we’ve already done/created.</p>
+            <a href="" class="mt-5 d-flex justify-content-end"><app-lmm-button ButtonText="about us" routerLink="aboutUs"></app-lmm-button></a>
           </div>
-          <div class="main_video" id="mainVideo">
-            <video #mainVideo src="../../../assets/media/video/short_video.mp4" (click)="videoClose()"></video><!-- (mouseover)="M_CursorIn()" (mouseout)="M_CursorOut()"-->
-            <button id="sound" class="video_btn fa sound" (click)="sound()"></button>
-            <button id="mute" class="video_btn fa mute" (click)="mute()"></button>
+        </div>
+        <div class="col-xl-7">
+          <div class="media">
+            <div class="short_video" id="shortVideo" (click)="videoOpen()"><!-- (mouseover)="S_CursorIn()" (mouseout)="S_CursorOut()"-->
+              <video id="shortReel" loop>
+                <source src="" >
+              </video>
+            </div>
+            <div class="main_video" id="mainVideo">
+              <video #mainVideo src="" data-srcset="assets/media/video/short_video.mp4" (click)="videoClose()">
+                <!-- <source src=""> -->
+              </video><!-- (mouseover)="M_CursorIn()" (mouseout)="M_CursorOut()"-->
+              <button id="sound" class="video_btn fa sound" (click)="sound()"></button>
+              <button id="mute" class="video_btn fa mute" (click)="mute()"></button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="scrolltrigger m-0 p-0">
-    <h1 class="m-0 lmm_h1_stroke" id="showreel">
-      <app-scrolltide content="showreel" type="text" time="1"></app-scrolltide>
-    </h1>
-  </div>
-</div>
-<div class="our_recent pt-5">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="w-25 text-right mt-5">
-        <span class="lmm_h1 d-block">our</span>
-        <span class="lmm_h1 d-block">recent</span>
-      </div>
+    <div class="scrolltrigger m-0 p-0">
+      <h1 class="m-0 lmm_h1_stroke" id="showreel">
+        <app-scrolltide content="showreel" type="text" time="1"></app-scrolltide>
+      </h1>
     </div>
-    <div class="row pt-0">
-      <div class="col-md-9 m-auto">
-        <div class="our_recent_card arrow_cursor" [routerLink]="item.href" *ngFor="let item of our_recent">
-          <p class="w-50">{{item.description}}</p>
-          <app-lottie [img_src]="item.img_src" [lottie_src]="item.lottie_src" [imgVisible]="true" [id]="item.id"></app-lottie><!-- (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()"-->
+  </div>
+</div><!--infinite scroll-->
+<div class="search-results" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="serviceData()">
+  <div class="our_recent pt-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="w-25 text-right mt-5">
+          <span class="lmm_h1 d-block">our</span>
+          <span class="lmm_h1 d-block">recent</span>
         </div>
       </div>
-      <div class="col-md-9 m-auto">
-        <a class="lmm_arrow_btn mt-5 ml-n5" routerLink="caseStudy">view all projects</a>
+      <div class="row pt-0">
+        <div class="col-md-9 m-auto">
+          <div class="our_recent_card arrow_cursor" [routerLink]="item.href" *ngFor="let item of our_recent">
+            <p class="w-50">{{item.description}}</p>
+            <app-lottie [img_src]="item.img_src" [lottie_src]="item.lottie_src" [imgVisible]="true" [id]="item.id"></app-lottie><!-- (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()"-->
+          </div>
+        </div>
+        <div class="col-md-9 m-auto">
+          <a class="lmm_arrow_btn mt-5 ml-n5" routerLink="caseStudy">view all projects</a>
+        </div>
       </div>
     </div>
   </div>
@@ -92,7 +101,7 @@
               <app-lottie [lottie_src]="item.lottie_src" [imgVisible]="false" [id]="item.id"></app-lottie>
             </div>
           </div>
-          <a class="lmm_arrow_btn ml-5 mt-4" routerLink='service/{{item.title}}'>view more</a>
+          <a class="lmm_arrow_btn ml-5 mt-4" routerLink='services/{{item.title}}'>view more</a>
         </div>
       </div>
       <div class="lmm_marquee_plugin">
@@ -119,7 +128,7 @@
       <div class="col-md-6 d-flex justify-content-center align-items-center">
         <div class="skating_des m-auto pr-5">
             <p class="text-justify text-white mb-5 pb-5">At Loud Mob Labs we  make targeted marketing smarter with our homegrown products. Exploiting the latest technological advancements like Facial recognition and augmented reality, we create an emotional connect with your consumers.</p>
-            <a href="" class="ml-auto mt-n5 d-flex justify-content-end"><app-lmm-button ButtonText="our labs" routerLink="loudMobLab"></app-lmm-button></a>
+            <a href="" class="ml-auto mt-n5 d-flex justify-content-end"><app-lmm-button ButtonText="our labs" routerLink="/loudMobLab"></app-lmm-button></a>
         </div>
       </div>
     </div>

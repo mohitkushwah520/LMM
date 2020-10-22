@@ -15,7 +15,7 @@
   <div class="container-fluid">
     <div class="row position-relative">
       <div class="col-md-6 text-center" *ngFor="let item of blogsData">
-        <div class="box text-center" [routerLink]="'/blog/'+item.id">
+        <div class="box text-center" [routerLink]="'/blogs/'+item.id">
           <div class="card text-center arrow_cursor"><!--  (mouseover)="L_CursorIn()" (mouseout)="L_CursorOut()"-->
             <img [src]="item.blogImage" alt="blogImage">
             <!-- <div class="hover" [routerLink]="'/blog/'+item.id">

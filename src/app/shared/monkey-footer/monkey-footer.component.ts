@@ -18,6 +18,7 @@ export class MonkeyFooterComponent implements OnInit {
     var allvideo = document.querySelectorAll('video');
     allvideo.forEach((el)=>{
       var video = el as HTMLVideoElement;
+      video.load();
       video.muted = true;
       video.play();
     })
